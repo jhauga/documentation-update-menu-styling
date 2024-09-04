@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  
+
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+
+
+<link rel='stylesheet' href='/style.min.6f047efea46ea2384fb98ee2d90642926037234cfeb77e270bbd5421bb705db6.css'>
+
+
+<script src='/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
+
+
+  <title>故障分析 - Mastodon documentation</title>
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://docs.joinmastodon.org/zh-cn/admin/troubleshooting/">
+
+  
+
+  <meta name="twitter:title" content="故障分析">
+  <meta name="twitter:site" content="@joinmastodon">
+
+  <link rel="canonical" href="https://docs.joinmastodon.org/zh-cn/admin/troubleshooting/">
+</head>
+
+<body>
+  <div class="container sidebar-layout">
+    <nav class="sidebar"><a class="brand" href="/">
+  <img class="link-logo" src="/brand.svg" alt="Mastodon" />
+</a>
+
+<input id="mobile-nav-toggle" class="mobile-nav-toggle" type="checkbox">
+<label for="mobile-nav-toggle">
+    <span class="menu-open">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z"/></svg>
+    </span>
+    <span class="menu-close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/></svg>
+    </span>
+</label>
+
+<ul>
+  
+  
+    <li>
+      
+        <a href="/zh-cn/" class="">什么是Mastodon？</a>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">使用Mastodon</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/zh-cn/user/signup/" class="">创建一个帐户</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/user/profile/" class="">设置个人资料</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/user/posting/" class="">发布嘟文</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/user/network/" class="">使用社交功能</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/user/moderating/" class="">处理不想要的内容</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/user/discoverability/" class="">推广自己和他人</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/user/preferences/" class="">设置你的首选项</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/user/contacts/" class="">更多设置</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/user/external/" class="">站外使用Mastodon</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/user/moving/" class="">迁移或删除帐户</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/user/run-your-own/" class="">运行自己的服务器</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">运营Mastodon</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/zh-cn/admin/prerequisites/" class="">准备你的机器</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/admin/install/" class="">从源中安装</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/admin/config/" class="">设置你的环境</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/admin/optional/" class="">安装可选特色功能</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/zh-cn/admin/optional/elasticsearch/" class="">全文搜索</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/zh-cn/admin/optional/tor/" class="">匿名服务</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/zh-cn/admin/optional/sso/" class="">单点登录（SSO）</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/admin/setup/" class="">配置你的新实例</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/admin/tootctl/" class="">使用管理命令行</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/admin/upgrading/" class="">升级到新版本</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/admin/backups/" class="">备份你的服务器</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/admin/migrating/" class="">迁移到新机器</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/admin/scaling/" class="">伸缩你的服务器</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/admin/moderation/" class="">运营操作</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/zh-cn/admin/troubleshooting/" class="active">故障分析</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">开发Mastodon应用</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">向Mastodon项目做贡献</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">遵循的标准</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">REST API</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">API 方法</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">API 实体</span>
+      
+
+      
+    </li>
+  
+</ul>
+</nav>
+    <main>
+  <h1>故障分析</h1>
+
+  
+  <aside>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#我看到一个故障页说一些东西出错了我怎么找出哪里出错了"><strong>我看到一个故障页说一些东西出错了。我怎么找出哪里出错了？</strong></a></li>
+        <li><a href="#升级新版本后有些页面看起来很奇怪就像它们含有未设置样式的元素一样为什么"><strong>升级新版本后，有些页面看起来很奇怪，就像它们含有未设置样式的元素一样。为什么？</strong></a></li>
+        <li><a href="#升级新版本后一些请求失败了日志中的错误信息是-missing-columns-or-tables为什么"><strong>升级新版本后，一些请求失败了，日志中的错误信息是 missing columns or tables。为什么？</strong></a></li>
+        <li><a href="#我试图运行-tootctl-或-rakerails-命令但我得到-uninitialized-constants-错误信息哪里出错了"><strong>我试图运行 <code>tootctl</code> 或 <code>rake</code>/<code>rails</code> 命令，但我得到 uninitialized constants 错误信息。哪里出错了？</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+  <div class="e-content">
+    <h2 class="heading" id="我看到一个故障页说一些东西出错了我怎么找出哪里出错了">
+	<span class="heading__text"><strong>我看到一个故障页说一些东西出错了。我怎么找出哪里出错了？</strong></span>
+	<a class="heading__anchor-link" href="#%e6%88%91%e7%9c%8b%e5%88%b0%e4%b8%80%e4%b8%aa%e6%95%85%e9%9a%9c%e9%a1%b5%e8%af%b4%e4%b8%80%e4%ba%9b%e4%b8%9c%e8%a5%bf%e5%87%ba%e9%94%99%e4%ba%86%e6%88%91%e6%80%8e%e4%b9%88%e6%89%be%e5%87%ba%e5%93%aa%e9%87%8c%e5%87%ba%e9%94%99%e4%ba%86">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><p>所有带堆栈追踪（stack traces）的错误信息都将会被写入系统日志。当使用systemd时，可使用 <code>journalctl -u mastodon-web</code>（替换以相应的服务名） 来浏览每个服务的日志。当使用Docker时，与之类似：<code>docker logs mastodon_web_1</code>（替换以相应的容器名）。</p>
+<p>服务端详细错误信息将<em>永不会</em>公开显示，因为它们可能会暴露你的内部设置，并为攻击者提供线索，让他们了解如何更好的入侵或如何更高效的滥用。</p>
+<p>来自Mastodon web服务器的每一个响应都带有独一无二的请求ID（request ID），该ID也将反映在日志中。通过检查错误页的请求头，你可以在日志中轻松找到与之对应的堆栈追踪（stack traces）。</p>
+<h2 class="heading" id="升级新版本后有些页面看起来很奇怪就像它们含有未设置样式的元素一样为什么">
+	<span class="heading__text"><strong>升级新版本后，有些页面看起来很奇怪，就像它们含有未设置样式的元素一样。为什么？</strong></span>
+	<a class="heading__anchor-link" href="#%e5%8d%87%e7%ba%a7%e6%96%b0%e7%89%88%e6%9c%ac%e5%90%8e%e6%9c%89%e4%ba%9b%e9%a1%b5%e9%9d%a2%e7%9c%8b%e8%b5%b7%e6%9d%a5%e5%be%88%e5%a5%87%e6%80%aa%e5%b0%b1%e5%83%8f%e5%ae%83%e4%bb%ac%e5%90%ab%e6%9c%89%e6%9c%aa%e8%ae%be%e7%bd%ae%e6%a0%b7%e5%bc%8f%e7%9a%84%e5%85%83%e7%b4%a0%e4%b8%80%e6%a0%b7%e4%b8%ba%e4%bb%80%e4%b9%88">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><p>检查升级后，你是否运行 <code>RAILS_ENV=production bin/rails assets:precompile</code> 并重启Mastodon web 进程。因为这看起来像提供了过期的样式与脚本。这也有可能由于内存缺乏导致预编译失败，很不幸webpack会占用大量内存。如果是这个原因，请确保你已经分配了swap空间。另外，也可以在另一台机器上预编译静态文件，然后把它们复制至 <code>public/packs</code> 目录。</p>
+<h2 class="heading" id="升级新版本后一些请求失败了日志中的错误信息是-missing-columns-or-tables为什么">
+	<span class="heading__text"><strong>升级新版本后，一些请求失败了，日志中的错误信息是 missing columns or tables。为什么？</strong></span>
+	<a class="heading__anchor-link" href="#%e5%8d%87%e7%ba%a7%e6%96%b0%e7%89%88%e6%9c%ac%e5%90%8e%e4%b8%80%e4%ba%9b%e8%af%b7%e6%b1%82%e5%a4%b1%e8%b4%a5%e4%ba%86%e6%97%a5%e5%bf%97%e4%b8%ad%e7%9a%84%e9%94%99%e8%af%af%e4%bf%a1%e6%81%af%e6%98%af-missing-columns-or-tables%e4%b8%ba%e4%bb%80%e4%b9%88">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><p>检查升级后，你是否运行 <code>RAILS_ENV=production bin/rails db:migrate</code>。因为这看起来Mastodon代码访问了一个更新或更旧的数据库schema。如果你使用PgBouncer，请确保此命令直接连接PostgreSQL，因为PgBouncer不支持迁移过程中的锁表操作。</p>
+<h2 class="heading" id="我试图运行-tootctl-或-rakerails-命令但我得到-uninitialized-constants-错误信息哪里出错了">
+	<span class="heading__text"><strong>我试图运行 <code>tootctl</code> 或 <code>rake</code>/<code>rails</code> 命令，但我得到 uninitialized constants 错误信息。哪里出错了？</strong></span>
+	<a class="heading__anchor-link" href="#%e6%88%91%e8%af%95%e5%9b%be%e8%bf%90%e8%a1%8c-tootctl-%e6%88%96-rakerails-%e5%91%bd%e4%bb%a4%e4%bd%86%e6%88%91%e5%be%97%e5%88%b0-uninitialized-constants-%e9%94%99%e8%af%af%e4%bf%a1%e6%81%af%e5%93%aa%e9%87%8c%e5%87%ba%e9%94%99%e4%ba%86">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><p>检查你是否在命令前使用 <code>RAILS_ENV=production</code> 指定正确的环境。默认情况下，假定使用开发环境，因此代码尝试加载开发相关gem。然而，在生产环境中，我们避免安装这些gem。这就是错误的来源。</p>
+<figure>
+    <p>
+        <strong>翻译状态：</strong>
+        本文是英文页面 <a href="/admin/troubleshooting/">Troubleshooting errors</a> 的翻译，最后翻译时间：，点击<a href="https://github.com/mastodon/documentation/compare/ad1ef20f171c9f61439f32168987b0b4f9abd74b...master">这里</a>可以查看翻译后页面的改动。
+    </p>
+</figure>
+
+
+
+    <p style="color: #606085;">
+      最后更新于 May 21, 2020 · <a href='https://github.com/mastodon/documentation/tree/main/content/zh-cn/admin%5ctroubleshooting.md' style="color: #606085;">改进此页面</a>
+
+      
+        <br />
+
+        也可在此找到：
+
+        
+          <a href="/admin/troubleshooting/" style="color: #606085;" hreflang="en">English</a>
+        
+      
+    </p>
+
+  </div>
+</main>
+  </div>
+
+  <footer class="footer container">
+  <div class="sponsorship">
+    <div class="container">
+      <h2>
+        Sponsored by
+      </h2>
+
+      <div class="logo-grid">
+        <div>
+          <a href="https://www.dotcom-monitor.com/es/">
+            <img src="/assets/sponsors/dotcom-monitor-logo.png" alt="Dotcom-Monitor" />
+          </a>
+
+          <a href="https://www.loadview-testing.com/products/jmeter-load-testing/">
+            <img src="/assets/sponsors/LoadView-logo.png" alt="LoadView" />
+          </a>
+
+          <a href="http://www.stevetures.com/">
+            <img src="/assets/sponsors/stephen-tures.jpg" alt="Stephen Tures" />
+          </a>
+
+          <a href="https://swayable.com">
+            <img src="/assets/sponsors/swayable.jpeg" alt="Swayable" />
+          </a>
+
+          <a href="https://www.sponsormotion.com/">
+            <img src="/assets/sponsors/SponsorMotion.png" alt="SponsorMotion" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="legal legal--right">
+    <a href='https://joinmastodon.org'>加入Mastodon</a> · <a href='https://blog.joinmastodon.org'>博客</a> · <a href='https://mastodon.social/@Mastodon' target='_blank'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mastodon" viewBox="0 0 16 16"><path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a4 4 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522q0-1.288.66-2.046c.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764q.662.757.661 2.046z"/></svg></a>
+  </p>
+
+  <p class="legal"><a href='https://github.com/mastodon/documentation/tree/main/content/zh-cn/admin%5ctroubleshooting.md'>查看源代码</a> · <a href='https://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0</a> · <a href='https://joinmastodon.org/imprint'>版权信息</a></p>
+</footer>
+
+</body>
+
+</html>

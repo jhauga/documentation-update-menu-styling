@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+
+
+<link rel='stylesheet' href='/style.min.6f047efea46ea2384fb98ee2d90642926037234cfeb77e270bbd5421bb705db6.css'>
+
+
+<script src='/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
+
+
+  <title>Installing from source - Mastodon documentation</title>
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://docs.joinmastodon.org/admin/install/">
+
+  
+    <meta name="description" content="Instructional guide on creating your own Mastodon-powered website.">
+    <meta property="og:description" content="Instructional guide on creating your own Mastodon-powered website.">
+    <meta name="twitter:description" content="Instructional guide on creating your own Mastodon-powered website.">
+  
+
+  <meta name="twitter:title" content="Installing from source">
+  <meta name="twitter:site" content="@joinmastodon">
+
+  <link rel="canonical" href="https://docs.joinmastodon.org/admin/install/">
+</head>
+
+<body>
+  <div class="container sidebar-layout">
+    <nav class="sidebar"><a class="brand" href="/">
+  <img class="link-logo" src="/brand.svg" alt="Mastodon" />
+</a>
+
+<input id="mobile-nav-toggle" class="mobile-nav-toggle" type="checkbox">
+<label for="mobile-nav-toggle">
+    <span class="menu-open">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z"/></svg>
+    </span>
+    <span class="menu-close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/></svg>
+    </span>
+</label>
+
+<ul>
+  
+  
+    <li>
+      
+        <a href="/" class="">What is Mastodon?</a>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Using Mastodon</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/user/signup/" class="">Signing up for an account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/profile/" class="">Setting up your profile</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/posting/" class="">Posting to your profile</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/network/" class="">Using the network features</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/moderating/" class="">Dealing with unwanted content</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/discoverability/" class="">Promoting yourself and others</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/preferences/" class="">Set your preferences</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/contacts/" class="">More settings</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/external/" class="">Using Mastodon externally</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/moving/" class="">Moving or leaving accounts</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/run-your-own/" class="">Running your own server</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Running Mastodon</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/admin/prerequisites/" class="">Preparing your machine</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/install/" class="active">Installing from source</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/config/" class="">Configuring your environment</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/elasticsearch/" class="">Configuring full-text search</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/optional/" class="">Installing optional features</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/admin/optional/object-storage/" class="">Object storage</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/admin/optional/tor/" class="">Onion services</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/admin/optional/captcha/" class="">Captcha</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/admin/optional/sso/" class="">Single Sign On</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/admin/setup/" class="">Setting up your new instance</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/tootctl/" class="">Using the admin CLI</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/upgrading/" class="">Upgrading to a new release</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/backups/" class="">Backing up your server</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/migrating/" class="">Migrating to a new machine</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/scaling/" class="">Scaling up your server</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/moderation/" class="">Moderation actions</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/troubleshooting/" class="">Troubleshooting errors</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/admin/troubleshooting/index-corruption/" class="">Database index corruption</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/admin/roles/" class="">Roles</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Developing Mastodon apps</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/client/intro/" class="">Getting started with the API</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/public/" class="">Playing with public data</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/token/" class="">Obtaining client app access</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/authorized/" class="">Logging in with an account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/libraries/" class="">Libraries and implementations</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Contributing to Mastodon</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/dev/overview/" class="">Technical overview</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/setup/" class="">Setting up a dev environment</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/code/" class="">Code structure</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/routes/" class="">Routes</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/disclosure/" class="">Bug bounties and responsible disclosure</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Spec compliance</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/spec/activitypub/" class="">ActivityPub</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/webfinger/" class="">WebFinger</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/security/" class="">Security</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/microformats/" class="">Microformats</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/oauth/" class="">OAuth</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/bearcaps/" class="">Bearcaps</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">REST API</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/api/guidelines/" class="">Guidelines and best practices</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/api/oauth-scopes/" class="">OAuth Scopes</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/api/rate-limits/" class="">Rate limits</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">API Methods</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/methods/apps/" class="">apps</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/oauth/" class="">oauth</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/emails/" class="">emails</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/accounts/" class="">accounts</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/bookmarks/" class="">bookmarks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/favourites/" class="">favourites</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/mutes/" class="">mutes</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/blocks/" class="">blocks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/domain_blocks/" class="">domain_blocks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/filters/" class="">filters</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/reports/" class="">reports</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/follow_requests/" class="">follow_requests</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/endorsements/" class="">endorsements</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/featured_tags/" class="">featured_tags</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/preferences/" class="">preferences</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/followed_tags/" class="">followed_tags</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/suggestions/" class="">suggestions</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/tags/" class="">tags</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/profile/" class="">profile</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/methods/statuses/" class="">statuses</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/media/" class="">media</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/polls/" class="">polls</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/scheduled_statuses/" class="">scheduled_statuses</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/timelines/" class="">timelines</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/conversations/" class="">conversations</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/lists/" class="">lists</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/markers/" class="">markers</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/streaming/" class="">streaming</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/notifications/" class="">notifications</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/push/" class="">push</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/search/" class="">search</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/methods/instance/" class="">instance</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/trends/" class="">trends</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/directory/" class="">directory</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/custom_emojis/" class="">custom_emojis</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/announcements/" class="">announcements</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/admin/" class="">admin</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/admin/accounts/" class="">accounts</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/canonical_email_blocks/" class="">canonical_email_blocks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/dimensions/" class="">dimensions</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/domain_allows/" class="">domain_allows</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/domain_blocks/" class="">domain_blocks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/email_domain_blocks/" class="">email_domain_blocks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/ip_blocks/" class="">ip_blocks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/measures/" class="">measures</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/reports/" class="">reports</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/retention/" class="">retention</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/trends/" class="">trends</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/proofs/" class="">proofs</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/methods/oembed/" class="">oembed</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">API Entities</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/entities/Account/" class="">Account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/AccountWarning/" class="">AccountWarning</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_Account/" class="">Admin::Account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_CanonicalEmailBlock/" class="">Admin::CanonicalEmailBlock</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_Cohort/" class="">Admin::Cohort</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_Dimension/" class="">Admin::Dimension</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_DomainAllow/" class="">Admin::DomainAllow</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_DomainBlock/" class="">Admin::DomainBlock</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_EmailDomainBlock/" class="">Admin::EmailDomainBlock</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_Ip/" class="">Admin::Ip</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_IpBlock/" class="">Admin::IpBlock</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_Measure/" class="">Admin::Measure</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_Report/" class="">Admin::Report</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Announcement/" class="">Announcement</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Appeal/" class="">Appeal</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Application/" class="">Application</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Context/" class="">Context</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Conversation/" class="">Conversation</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/CustomEmoji/" class="">CustomEmoji</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/DomainBlock/" class="">DomainBlock</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Error/" class="">Error</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/ExtendedDescription/" class="">ExtendedDescription</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/FamiliarFollowers/" class="">FamiliarFollowers</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/FeaturedTag/" class="">FeaturedTag</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Filter/" class="">Filter</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/FilterKeyword/" class="">FilterKeyword</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/FilterResult/" class="">FilterResult</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/FilterStatus/" class="">FilterStatus</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/IdentityProof/" class="">IdentityProof</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Instance/" class="">Instance</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/List/" class="">List</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Marker/" class="">Marker</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/MediaAttachment/" class="">MediaAttachment</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Notification/" class="">Notification</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/NotificationPolicy/" class="">NotificationPolicy</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/NotificationRequest/" class="">NotificationRequest</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Poll/" class="">Poll</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Preferences/" class="">Preferences</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/PreviewCard/" class="">PreviewCard</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/PreviewCardAuthor/" class="">PreviewCardAuthor</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Reaction/" class="">Reaction</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Relationship/" class="">Relationship</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/RelationshipSeveranceEvent/" class="">RelationshipSeveranceEvent</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Report/" class="">Report</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Role/" class="">Role</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Rule/" class="">Rule</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/ScheduledStatus/" class="">ScheduledStatus</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Search/" class="">Search</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Status/" class="">Status</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/StatusEdit/" class="">StatusEdit</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/StatusSource/" class="">StatusSource</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Suggestion/" class="">Suggestion</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Tag/" class="">Tag</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Token/" class="">Token</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Translation/" class="">Translation</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/V1_Filter/" class="">V1::Filter</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/V1_Instance/" class="">V1::Instance</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/V1_NotificationPolicy/" class="">V1::NotificationPolicy</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/WebPushSubscription/" class="">WebPushSubscription</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+</ul>
+</nav>
+    <main>
+  <h1>Installing from source</h1>
+
+  
+    <p>Instructional guide on creating your own Mastodon-powered website.</p>
+  
+  <aside>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#pre-requisites">Pre-requisites</a>
+          <ul>
+            <li><a href="#system-repositories">System repositories</a></li>
+            <li><a href="#system-packages">System packages</a></li>
+            <li><a href="#installing-ruby">Installing Ruby</a></li>
+          </ul>
+        </li>
+        <li><a href="#setup">Setup</a>
+          <ul>
+            <li><a href="#setting-up-postgresql">Setting up PostgreSQL</a></li>
+            <li><a href="#setting-up-mastodon">Setting up Mastodon</a></li>
+            <li><a href="#acquiring-a-ssl-certificate">Acquiring an SSL certificate</a></li>
+            <li><a href="#setting-up-nginx">Setting up nginx</a></li>
+            <li><a href="#setting-up-systemd-services">Setting up systemd services</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+  <div class="e-content">
+    <h2 class="heading" id="pre-requisites">
+	<span class="heading__text">Pre-requisites</span>
+	<a class="heading__anchor-link" href="#pre-requisites">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><ul>
+<li>A machine running <strong>Ubuntu 22.04</strong> or <strong>Debian 11</strong> that you have root access to</li>
+<li>A <strong>domain name</strong> (or a subdomain) for the Mastodon server, e.g. <code>example.com</code></li>
+<li>An e-mail delivery service or other <strong>SMTP server</strong></li>
+</ul>
+<p>You will be running the commands as root. If you aren’t already root, switch to root: <code>sudo su -</code></p>
+<h3 class="heading" id="system-repositories">
+	<span class="heading__text">System repositories</span>
+	<a class="heading__anchor-link" href="#system-repositories">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Make sure curl, wget, gnupg, apt-transport-https, lsb-release and ca-certificates are installed first:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install -y curl wget gnupg apt-transport-https lsb-release ca-certificates
+</span></span></code></pre></div><h4 class="heading" id="node-js">
+	<span class="heading__text">Node.js</span>
+	<a class="heading__anchor-link" href="#node-js">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h4><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+</span></span><span style="display:flex;"><span>echo <span style="color:#a5d6ff">&#34;deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main&#34;</span> | tee /etc/apt/sources.list.d/nodesource.list
+</span></span></code></pre></div><h4 class="heading" id="postgresql">
+	<span class="heading__text">PostgreSQL</span>
+	<a class="heading__anchor-link" href="#postgresql">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h4><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget -O /usr/share/keyrings/postgresql.asc https://www.postgresql.org/media/keys/ACCC4CF8.asc
+</span></span><span style="display:flex;"><span>echo <span style="color:#a5d6ff">&#34;deb [signed-by=/usr/share/keyrings/postgresql.asc] http://apt.postgresql.org/pub/repos/apt </span><span style="color:#ff7b72">$(</span>lsb_release -cs<span style="color:#ff7b72">)</span><span style="color:#a5d6ff">-pgdg main&#34;</span> &gt; /etc/apt/sources.list.d/postgresql.list
+</span></span></code></pre></div><h3 class="heading" id="system-packages">
+	<span class="heading__text">System packages</span>
+	<a class="heading__anchor-link" href="#system-packages">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt update
+</span></span><span style="display:flex;"><span>apt install -y <span style="color:#79c0ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#79c0ff"></span>  imagemagick ffmpeg libvips-tools libpq-dev libxml2-dev libxslt1-dev file git-core <span style="color:#79c0ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#79c0ff"></span>  g++ libprotobuf-dev protobuf-compiler pkg-config gcc autoconf <span style="color:#79c0ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#79c0ff"></span>  bison build-essential libssl-dev libyaml-dev libreadline6-dev <span style="color:#79c0ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#79c0ff"></span>  zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev <span style="color:#79c0ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#79c0ff"></span>  nginx nodejs redis-server redis-tools postgresql postgresql-contrib <span style="color:#79c0ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#79c0ff"></span>  certbot python3-certbot-nginx libidn11-dev libicu-dev libjemalloc-dev
+</span></span></code></pre></div><h4 class="heading" id="yarn">
+	<span class="heading__text">Yarn</span>
+	<a class="heading__anchor-link" href="#yarn">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h4><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>corepack enable
+</span></span><span style="display:flex;"><span>yarn set version classic
+</span></span></code></pre></div><h3 class="heading" id="installing-ruby">
+	<span class="heading__text">Installing Ruby</span>
+	<a class="heading__anchor-link" href="#installing-ruby">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>We will use rbenv to manage Ruby versions as it simplifies obtaining the correct versions and updating them when new releases are available. Since rbenv needs to be installed for an individual Linux user, we must first create the user account under which Mastodon will run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adduser --disabled-login mastodon
+</span></span></code></pre></div><p>We can then switch to the user:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>su - mastodon
+</span></span></code></pre></div><p>And proceed to install rbenv and rbenv-build:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+</span></span><span style="display:flex;"><span>echo <span style="color:#a5d6ff">&#39;export PATH=&#34;$HOME/.rbenv/bin:$PATH&#34;&#39;</span> &gt;&gt; ~/.bashrc
+</span></span><span style="display:flex;"><span>echo <span style="color:#a5d6ff">&#39;eval &#34;$(rbenv init -)&#34;&#39;</span> &gt;&gt; ~/.bashrc
+</span></span><span style="display:flex;"><span>exec bash
+</span></span><span style="display:flex;"><span>git clone https://github.com/rbenv/ruby-build.git <span style="color:#a5d6ff">&#34;</span><span style="color:#ff7b72">$(</span>rbenv root<span style="color:#ff7b72">)</span><span style="color:#a5d6ff">&#34;</span>/plugins/ruby-build
+</span></span></code></pre></div><p>Once this is done, we can install the correct Ruby version:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#79c0ff">RUBY_CONFIGURE_OPTS</span><span style="color:#ff7b72;font-weight:bold">=</span>--with-jemalloc rbenv install 3.2.3
+</span></span><span style="display:flex;"><span>rbenv global 3.2.3
+</span></span></code></pre></div><p>We’ll also need to install the bundler:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gem install bundler --no-document
+</span></span></code></pre></div><p>Return to the root user:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>exit
+</span></span></code></pre></div><h2 class="heading" id="setup">
+	<span class="heading__text">Setup</span>
+	<a class="heading__anchor-link" href="#setup">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><h3 class="heading" id="setting-up-postgresql">
+	<span class="heading__text">Setting up PostgreSQL</span>
+	<a class="heading__anchor-link" href="#setting-up-postgresql">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><h4 class="heading" id="performance-configuration-optional">
+	<span class="heading__text">Performance configuration (optional)</span>
+	<a class="heading__anchor-link" href="#performance-configuration-optional">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h4><p>For optimal performance, you may use <a href="https://pgtune.leopard.in.ua/#/">pgTune</a> to generate an appropriate configuration and edit values in <code>/etc/postgresql/16/main/postgresql.conf</code> before restarting PostgreSQL with <code>systemctl restart postgresql</code></p>
+<h4 class="heading" id="creating-a-user">
+	<span class="heading__text">Creating a user</span>
+	<a class="heading__anchor-link" href="#creating-a-user">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h4><p>You will need to create a PostgreSQL user that Mastodon could use. It is easiest to go with “ident” authentication in a simple setup, i.e. the PostgreSQL user does not have a separate password and can be used by the Linux user with the same username.</p>
+<p>Open the prompt:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo -u postgres psql
+</span></span></code></pre></div><p>In the prompt, execute:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">CREATE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">USER</span><span style="color:#6e7681"> </span>mastodon<span style="color:#6e7681"> </span><span style="color:#ff7b72">CREATEDB</span>;<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#f85149">\</span>q<span style="color:#6e7681">
+</span></span></span></code></pre></div><p>Done!</p>
+<h3 class="heading" id="setting-up-mastodon">
+	<span class="heading__text">Setting up Mastodon</span>
+	<a class="heading__anchor-link" href="#setting-up-mastodon">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>It is time to download the Mastodon code. Switch to the mastodon user:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>su - mastodon
+</span></span></code></pre></div><h4 class="heading" id="checking-out-the-code">
+	<span class="heading__text">Checking out the code</span>
+	<a class="heading__anchor-link" href="#checking-out-the-code">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h4><p>Use git to download the latest stable release of Mastodon:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/mastodon/mastodon.git live <span style="color:#ff7b72;font-weight:bold">&amp;&amp;</span> cd live
+</span></span><span style="display:flex;"><span>git checkout <span style="color:#ff7b72">$(</span>git tag -l | grep <span style="color:#a5d6ff">&#39;^v[0-9.]*$&#39;</span> | sort -V | tail -n 1<span style="color:#ff7b72">)</span>
+</span></span></code></pre></div><h4 class="heading" id="installing-the-last-dependencies">
+	<span class="heading__text">Installing the last dependencies</span>
+	<a class="heading__anchor-link" href="#installing-the-last-dependencies">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h4><p>Now to install Ruby and JavaScript dependencies:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bundle config deployment <span style="color:#a5d6ff">&#39;true&#39;</span>
+</span></span><span style="display:flex;"><span>bundle config without <span style="color:#a5d6ff">&#39;development test&#39;</span>
+</span></span><span style="display:flex;"><span>bundle install -j<span style="color:#ff7b72">$(</span>getconf _NPROCESSORS_ONLN<span style="color:#ff7b72">)</span>
+</span></span><span style="display:flex;"><span>yarn install --pure-lockfile
+</span></span></code></pre></div><div class="hint hint-info">
+  <div class="hint-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M11 17h2v-6h-2zm1-8q.425 0 .713-.288T13 8t-.288-.712T12 7t-.712.288T11 8t.288.713T12 9m0 13q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/></svg></div>
+
+  The two <code>bundle config</code> commands are only needed the first time you&rsquo;re installing dependencies. If you&rsquo;re going to be updating or re-installing dependencies later, just <code>bundle install</code> will be enough.
+</div>
+
+<h4 class="heading" id="generating-a-configuration">
+	<span class="heading__text">Generating a configuration</span>
+	<a class="heading__anchor-link" href="#generating-a-configuration">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h4><p>Run the interactive setup wizard:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#79c0ff">RAILS_ENV</span><span style="color:#ff7b72;font-weight:bold">=</span>production bundle exec rake mastodon:setup
+</span></span></code></pre></div><p>This will:</p>
+<ul>
+<li>Create a configuration file</li>
+<li>Run asset precompilation</li>
+<li>Create the database schema</li>
+</ul>
+<p>The configuration file is saved as <code>.env.production</code>. You can review and edit it to your liking. Refer to the <a href="/admin/config/">documentation on configuration.</a></p>
+<p>You’re done with the mastodon user for now, so switch back to root:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>exit
+</span></span></code></pre></div><h3 class="heading" id="acquiring-a-ssl-certificate">
+	<span class="heading__text">Acquiring an SSL certificate</span>
+	<a class="heading__anchor-link" href="#acquiring-a-ssl-certificate">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>We’ll use Let’s Encrypt to get a free SSL certificate:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>certbot certonly --nginx -d example.com
+</span></span></code></pre></div><p>This will obtain the certificate, and save it in the directory <code>/etc/letsencrypt/live/example.com/</code>.</p>
+<h3 class="heading" id="setting-up-nginx">
+	<span class="heading__text">Setting up nginx</span>
+	<a class="heading__anchor-link" href="#setting-up-nginx">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Copy the configuration template for nginx from the Mastodon directory:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp /home/mastodon/live/dist/nginx.conf /etc/nginx/sites-available/mastodon
+</span></span><span style="display:flex;"><span>ln -s /etc/nginx/sites-available/mastodon /etc/nginx/sites-enabled/mastodon
+</span></span><span style="display:flex;"><span>rm /etc/nginx/sites-enabled/default
+</span></span></code></pre></div><p>Then edit <code>/etc/nginx/sites-available/mastodon</code> to</p>
+<ol>
+<li>Replace <code>example.com</code> with your own domain name</li>
+<li>Uncomment the <code>ssl_certificate</code> and <code>ssl_certificate_key</code> lines and replace the two lines with (ignore this step if you are bringing your own certificate)</li>
+</ol>
+<pre tabindex="0"><code>ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
+ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+</code></pre><ol start="3">
+<li>Make any other adjustments you might need.</li>
+</ol>
+<p>Un-comment the lines starting with <code>ssl_certificate</code> and <code>ssl_certificate_key</code>, updating the path with the correct domain name.</p>
+<p>Reload nginx for the changes to take effect:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl reload nginx
+</span></span></code></pre></div><p>At this point, you should be able to visit your domain in the browser and see the elephant hitting the computer screen error page. This is because we haven’t started the Mastodon process yet.</p>
+<h3 class="heading" id="setting-up-systemd-services">
+	<span class="heading__text">Setting up systemd services</span>
+	<a class="heading__anchor-link" href="#setting-up-systemd-services">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Copy the systemd service templates from the Mastodon directory:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cp /home/mastodon/live/dist/mastodon-*.service /etc/systemd/system/
+</span></span></code></pre></div><p>If you deviated from the defaults at any point, check that the username and paths are correct:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#79c0ff">$EDITOR</span> /etc/systemd/system/mastodon-*.service
+</span></span></code></pre></div><p>Finally, start and enable the new systemd services:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>systemctl daemon-reload
+</span></span><span style="display:flex;"><span>systemctl enable --now mastodon-web mastodon-sidekiq mastodon-streaming
+</span></span></code></pre></div><p>They will now automatically start at boot.</p>
+<div class="hint hint-success">
+  <div class="hint-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/></svg></div>
+
+  <strong>Hurray! This is it. You can visit your domain in the browser now!</strong>
+</div>
+
+
+
+    <p style="color: #606085;">
+      Last updated August 26, 2024 · <a href='https://github.com/mastodon/documentation/tree/main/content/en/admin%5cinstall.md' style="color: #606085;">Improve this page</a>
+
+      
+        <br />
+
+        Also available in:
+
+        
+          <a href="/zh-cn/admin/install/" style="color: #606085;" hreflang="zh-cn">简体中文</a>
+        
+      
+    </p>
+
+  </div>
+</main>
+  </div>
+
+  <footer class="footer container">
+  <div class="sponsorship">
+    <div class="container">
+      <h2>
+        Sponsored by
+      </h2>
+
+      <div class="logo-grid">
+        <div>
+          <a href="https://www.dotcom-monitor.com/es/">
+            <img src="/assets/sponsors/dotcom-monitor-logo.png" alt="Dotcom-Monitor" />
+          </a>
+
+          <a href="https://www.loadview-testing.com/products/jmeter-load-testing/">
+            <img src="/assets/sponsors/LoadView-logo.png" alt="LoadView" />
+          </a>
+
+          <a href="http://www.stevetures.com/">
+            <img src="/assets/sponsors/stephen-tures.jpg" alt="Stephen Tures" />
+          </a>
+
+          <a href="https://swayable.com">
+            <img src="/assets/sponsors/swayable.jpeg" alt="Swayable" />
+          </a>
+
+          <a href="https://www.sponsormotion.com/">
+            <img src="/assets/sponsors/SponsorMotion.png" alt="SponsorMotion" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="legal legal--right">
+    <a href='https://joinmastodon.org'>Join Mastodon</a> · <a href='https://blog.joinmastodon.org'>Blog</a> · <a href='https://mastodon.social/@Mastodon' target='_blank'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mastodon" viewBox="0 0 16 16"><path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a4 4 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522q0-1.288.66-2.046c.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764q.662.757.661 2.046z"/></svg></a>
+  </p>
+
+  <p class="legal"><a href='https://github.com/mastodon/documentation/tree/main/content/en/admin%5cinstall.md'>View source</a> · <a href='https://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0</a> · <a href='https://joinmastodon.org/imprint'>Imprint</a></p>
+</footer>
+
+</body>
+
+</html>

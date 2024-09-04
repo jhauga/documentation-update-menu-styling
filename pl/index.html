@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta name="generator" content="Hugo 0.131.0">
+  
+
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+
+
+<link rel='stylesheet' href='/style.min.6f047efea46ea2384fb98ee2d90642926037234cfeb77e270bbd5421bb705db6.css'>
+
+
+<script src='/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
+
+
+  <title>Mastodon documentation</title>
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://docs.joinmastodon.org/pl/">
+
+  
+    <meta name="description" content="Witamy w dokumentacji Mastodona!">
+    <meta property="og:description" content="Witamy w dokumentacji Mastodona!">
+    <meta name="twitter:description" content="Witamy w dokumentacji Mastodona!">
+  
+
+  <meta name="twitter:title" content="Czym jest Mastodon?">
+  <meta name="twitter:site" content="@joinmastodon">
+
+  <link rel="canonical" href="https://docs.joinmastodon.org/pl/">
+</head>
+
+<body>
+  <div class="container sidebar-layout">
+    <nav class="sidebar"><a class="brand" href="/">
+  <img class="link-logo" src="/brand.svg" alt="Mastodon" />
+</a>
+
+<input id="mobile-nav-toggle" class="mobile-nav-toggle" type="checkbox">
+<label for="mobile-nav-toggle">
+    <span class="menu-open">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z"/></svg>
+    </span>
+    <span class="menu-close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/></svg>
+    </span>
+</label>
+
+<ul>
+  
+  
+    <li>
+      
+        <a href="/pl/" class="active">Czym jest Mastodon?</a>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Korzystaj z Mastodona</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/pl/user/signup/" class="">Zarejestruj konto</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/profile/" class="">Dostosuj swój profil</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/posting/" class="">Utwórz wpisy</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/network/" class="">Korzystaj z funkcjonalności sieci</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/moderating/" class="">Radzenie sobie z niechcianą treścią</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/discoverability/" class="">Promuj siebie i innych</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/preferences/" class="">Zmień swoje ustawienia</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/contacts/" class="">Więcej ustawień</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/external/" class="">Korzystaj z Mastodona zewnętrznie</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/moving/" class="">Przenieś lub opuść konto</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/run-your-own/" class="">Prowadź swój własny serwer</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Uruchamianie Mastodona</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Twórz aplikacje dla Mastodona</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Współtwórz Mastodona</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Zgodność ze specyfikacją</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">REST API</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Metody API</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Jednostki API</span>
+      
+
+      
+    </li>
+  
+</ul>
+</nav>
+    <main>
+  <h1>Czym jest Mastodon?</h1>
+
+  
+    <p>Witamy w dokumentacji Mastodona!</p>
+  
+
+  <div class="e-content">
+    <h2 class="heading" id="microblogging">
+	<span class="heading__text">Czym jest mikroblog?</span>
+	<a class="heading__anchor-link" href="#microblogging">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><p>Tak jak blogowaniem nazwiemy publikowanie aktualności na stronie, <strong>mikroblogowanie</strong> to publikowanie mniejszych aktualności na strumieniu aktualności na własnym profilu. Możesz publikować wpisy tekstowe, dodatkowo umieszczając media takie jak zdjęcia, dźwięk, filmy czy ankiety. Mastodon pozwala na obserwowanie znajomych i poznawanie nowych.</p>
+<h2 class="heading" id="federation">
+	<span class="heading__text">Czym jest federacja?</span>
+	<a class="heading__anchor-link" href="#federation">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><p><strong>Federacja</strong> jest rodzajem decentralizacji. Zamiast jednej centralnej usługi, z której korzystają wszyscy, jest tu wiele niezależnych usług, z których może korzystać dowolna liczba osób.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Stopień decentralizacji</th>
+<th style="text-align:left">Przykłady</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Scentralizowane</td>
+<td style="text-align:left">Twitter, Facebook, Instagram</td>
+</tr>
+<tr>
+<td style="text-align:left">Sfederowane</td>
+<td style="text-align:left">E-mail, XMPP, sieci komórkowe, fizyczna poczta</td>
+</tr>
+<tr>
+<td style="text-align:left">Dystrybuowane</td>
+<td style="text-align:left">BitTorrent, IPFS, Scuttlebutt</td>
+</tr>
+</tbody>
+</table>
+<p>Serwer Mastodona może funkcjonować samodzielnie. Tak jak na tradycyjnej stronie, ludzie mogą się zarejestrować, publikować tam wiadomości i rozmawiać z innymi. W przeciwieństwie do tradycyjnej strony, serwery Mastodona wzajemnie komunikują się ze sobą, pozwalając swoim użytkownikom na wzajemną komunikację – tak, jak mając konto na Gmailu, możesz napisać mail do kogoś na Outlooku, Fastmail, Protonmail czy serwerze dowolnego dostawcy, tak długo, jak znasz jego e-mail, <strong>możesz wspomnieć lub napisać wiadomość do użytkownika dowolnego serwera, jeśli znasz jego adres</strong>.</p>
+<figure><img src="/assets/network-models.jpg"
+         alt="Od lewej do prawej: Scentralizowana, Sfederowana, Dystrybuowana"/><figcaption>
+            <p>Od lewej do prawej: Scentralizowana, Sfederowana, Dystrybuowana</p>
+        </figcaption>
+</figure>
+
+<h2 class="heading" id="fediverse">
+	<span class="heading__text">Czym jest ActivityPub?</span>
+	<a class="heading__anchor-link" href="#fediverse">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><p>Mastodon używa standaryzowanego, otwartego protokołu, aby implementować federację. Nazywa się on <strong>ActivityPub</strong>. Dowolne oprogramowanie, które również implementuje ActivityPub, może komunikować się z Mastodonem, tak jak serwery Mastodona komunikują się między sobą.</p>
+<p><strong>Fediwersum</strong> („sfederowane uniwersum”, z ang. „fediverse”) to nazwa dla wszystkich stron mogących komunikować się wzajemnie w Internecie z użyciem ActivityPub. Zaliczają się do tego wszystkie serwery Mastodona, ale też inne implementacje:</p>
+<ul>
+<li>Pleroma, modularny silnik mikroblogowy,</li>
+<li>Pixelfed, sfederowana platforma do udostępniania zdjęć, pozwalająca na tworzenie i dzielenie się i przeglądanie wpisów multimedialnych,</li>
+<li>Misskey, zawierające mikroblog wraz z dostosowywalnym panelem,</li>
+<li>PeerTube, pozwalające publikować filmy na kanałach,</li>
+<li>Plume, pozwalające na publikowanie dłuższych artykułów,</li>
+<li>i wiele więcej, wliczając to nawet osobiste strony internetowe!</li>
+</ul>
+<p>Fediwersum nie jest marką, częściej usłyszysz „zaobserwuj mnie na Mastodonie” niż „zaobserwuj mnie w Fediwersum”, choć to drugie jest technicznie bardziej poprawne.</p>
+<h2 class="heading" id="implications">
+	<span class="heading__text">Praktyczne konsekwencje</span>
+	<a class="heading__anchor-link" href="#implications">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><h3 class="heading" id="choice">
+	<span class="heading__text">Wybór dostawcy usługi i regulaminu</span>
+	<a class="heading__anchor-link" href="#choice">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Ponieważ Mastodon jest po prostu oprogramowaniem, o które może opierać się dowolna strona, potencjalny użytkownik Mastodona może wybrać jeden z dostępnych serwerów Mastodona, lub założyć własny, jeżeli ma taką potrzebę. Projekt Mastodon prowadzi listę polecanych serwerów na <a href="https://joinmastodon.org">joinmastodon.org</a>, którą możesz sortować według kategorii lub języka. Część serwerów może mieć wykraczające dalej zasady, jak wymaganie korzystania z określonych tagów na zawartości wrażliwej, część może mieć luźniejszą politykę moderacyjną, ale wszystkie z nich zadeklarowały przyjęcie <a href="https://joinmastodon.org/covenant">Umowy społecznej hostujących Mastodona</a>, co oznacza, że zobowiązały się do aktywnej moderacji przeciwko mowie nienawiści, dokonywać dziennych kopii zapasowych, mieć przynajmniej jednego dodatkowego administratora i informować przynajmniej na 3 miesięcy w przypadku zamknięcia serwera.</p>
+<blockquote>
+<p>Zarządzanie społecznością tak, aby dawała bezpieczeństwo każdemu z jej członków, nie jest proste. Mastodon zawiera podstawę i wiele narzędzi pomagających w tym i przenosi odpowiedzialność z jednego komercyjnego podmiotu do samych społeczności.</p>
+<p>&ndash; Eugen Rochko, 6 lipca 2018, <a href="https://blog.joinmastodon.org/2018/07/cage-the-mastodon/">„Cage the Mastodon”</a></p>
+</blockquote>
+<blockquote>
+<p>Scentralizowana platforma społecznościowa ma hierarchiczną strukturę, gdzie jej zasady i ich wymuszanie, jak i rozwój oraz kierunek rozwoju platformy są decyzją jej CEO [&hellip;] Zdecentralizowana sieć jest pozbawiona możliwości kontroli przez właściciela platormy, dzięki temu, że tego właściciela nie ma.</p>
+<p>&ndash; Eugen Rochko, 30 grudnia 2018, <a href="https://blog.joinmastodon.org/2018/12/why-does-decentralization-matter/">„Dlaczego decentralizacja ma znaczenie?”</a></p>
+</blockquote>
+<h3 class="heading" id="monetization">
+	<span class="heading__text">Finansowanie i monetyzacja</span>
+	<a class="heading__anchor-link" href="#monetization">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Serwery Mastodona są zarządzane przez różne osoby bądź organizacje całkowicie niezależnie. Mastodon nie implementuje w oprogramowaniu żadnych możliwości monetyzacji.</p>
+<p>Niektórzy operatorzy serwerów oferują płatne konta, część z nich to firmy, które korzystają z już posiadanej infrastruktury, część właścicieli serwerów polega na zbiórkach prowadzonych na Patreon lub podobnych usługach, wspieranych przez użytkowników, a część po prostu korzysta ze swoich pieniędzy, aby prowadzić serwer dla siebie, i może paru znajomych. Więc jeżeli chcesz pomóc właścicielowi serwera, na którym masz konto, sprawdź, czy oferuje on możliwość wsparcia finansowego.</p>
+<p>Rozwój Mastodona jest finansowany społecznościowo na <a href="https://patreon.com/mastodon">Patreonie</a> i <a href="https://opencollective.com/mastodon">OpenCollective</a>. <strong>Nie ma tu udziału kapitału wysokiego ryzyka.</strong></p>
+<blockquote>
+<p>Moim zdaniem, „natychmiastowe, publiczne, globalne wiadomości i konwersacje” powinny być rzeczywiście <strong>globalne</strong>. Dystrybuowane pomiędzy niezależnymi organizacjami i podmiotami, które mogą zarządzać sobą. Narzędziem użyteczności publicznej, bez zachęt do nadużywania tych konwersacji dla zysku.</p>
+<p>&ndash; Eugen Rochko, 3 marca 2018, <a href="https://blog.joinmastodon.org/2018/03/twitter-is-not-a-public-utility/">„Twitter nie jest narzędziem użyteczności publicznej”</a></p>
+</blockquote>
+<h3 class="heading" id="interoperability">
+	<span class="heading__text">Interoperacja między różnym oprogramowaniem</span>
+	<a class="heading__anchor-link" href="#interoperability">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>W praktyce – wyobraź sobie, że możesz zaobserwować użytkownika Instagramu ze swojego konta na Twitterze i komentować jego zdjęcia nie opuszczając swojego konta. Gdyby Twitter i Instagram były sfederowanymi usługami korzystającymi z tego samego protokołu, to byłoby możliwe. Mając konto na Mastodonie, <strong>możesz komunikować się z dowolnymi kompatybilnymi stronami,</strong> <em><strong>nawet jeśli nie są oparte na Mastodonie</strong></em>. Wszystko, czego potrzeba to wsparcie tej samej części protokołu ActivityPub przez oprogramowanie, tzn. tworzenie i interakcja z tworzonymi wpisami. Aby dowiedzieć się więcej o technicznej specyfikacji wymaganej do interoperacji z Mastodonem, przeczytaj strony <a href="spec/activitypub">ActivityPub</a>, <a href="spec/webfinger">WebFinger</a>, i <a href="spec/security">Security</a>. Aby dowiedzieć się więcej o tym, na co pozwala nam ActivityPub, przeczytaj <a href="https://blog.joinmastodon.org/2018/06/why-activitypub-is-the-future/">Dlaczego ActivityPub to przyszłość</a>.</p>
+<blockquote>
+<p>Wszystkie z tych platform różnią się i skupiają się na innych potrzebach. Mimo tego podstawa jest taka sama – ludzie subskrybują innych ludzi, aby otrzymywać ich wpisy. I dlatego, wszystkie są kompatybilne.</p>
+<p>&ndash; Eugen Rochko, 27 czerwca 2018, <a href="https://blog.joinmastodon.org/2018/06/why-activitypub-is-the-future/">„Dlaczego ActivityPub to przyszłość”</a></p>
+</blockquote>
+<h3 class="heading" id="libre">
+	<span class="heading__text">Wolne/otwarte oprogramowanie</span>
+	<a class="heading__anchor-link" href="#libre">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>W przeciwieństwie do własnościowych usług, <strong>każdy może dowolnie uruchamiać, przeglądać, kopiować, modyfikować, dystrybuować i korzystać z kodu źródłowego Mastodona, jeżeli jego pochodna praca będzie udostępniana na tych samych zasadach.</strong> Tak jak każdy użytkownik Mastodona może wybrać swojego dostawcę usługi, tak też każdy może dodawać nowe funkcje do Mastodona lub opublikować zmodyfikowaną wersję Mastodona o różniącej się funkcjonalności. Te zmodyfikowane wersje, zwane <em>forkami</em> muszą przestrzegać tych samych wolności, co oryginalny projekt Mastodon. Przykładowo, <a href="https://glitch-soc.github.io/docs/">glitch-soc</a> to dystrybucja Mastodona dodająca różne eksperymentalne funkcje. Istnieje wiele forków przeznaczonych na konkretny serwer, zwykle różniących się lekko wyglądem lub zawierających niewielkie zmiany w kodzie. Ponieważ Mastodon jest wolnym oprogramowaniem chroniącym Twojej wolności, tego typu personalizacja jest nie tylko dozwolona, ale wręcz do niej zachęcamy.</p>
+<blockquote>
+<p>Właściwą siłą jest pozwolenie użytkownikom tworzyć własną przestrzeń, własne społeczności, modyfikować oprogramowanie do swoich potrzeb, nie pozbawiając ich możliwości wzajemnej komunikacji.</p>
+<p>&ndash; Eugen Rochko, 20 lutego 2017, <a href="https://blog.joinmastodon.org/2017/02/the-power-to-build-communities/">„Siła do tworzenia społeczności – odpowiedź dla Marka Zuckerberga”</a></p>
+</blockquote>
+<blockquote>
+<p>Decentralizacja to odpowiednik bioróżnorodności w świecie cyfrowym, oznaką zdrowego ekosystemu. Zdecentralizowana sieć taka jak Fediwersum pozwala na koegzystowanie i współpracę różnych interfejsów, różnego oprogramowania i różnych form zarządzania.</p>
+<p>&ndash; Eugen Rochko, 30 grudnia 2018, <a href="https://blog.joinmastodon.org/2018/12/why-does-decentralization-matter/">„Dlaczego decentralizacja ma znaczenie?”</a></p>
+</blockquote>
+<h2 class="heading" id="next-steps">
+	<span class="heading__text">Wybierz swoją drogę</span>
+	<a class="heading__anchor-link" href="#next-steps">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><p>Naucz się korzystać z Mastodona:</p>
+<a href="/pl/user/signup/" class="page-ref">
+  <div class="page-ref-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M4 11v2h12l-5.5 5.5l1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5L16 11z"/></svg></div>
+  Zarejestruj konto
+</a>
+<p>Naucz się instalować Mastodona:</p>
+
+<p>Naucz się tworzyć aplikacje dla Mastodona:</p>
+
+<p>Naucz się o back-endzie Mastodona i dowiedz się jak wnieść swój wkład:</p>
+
+
+
+    <p style="color: #606085;">
+      Ostatnio aktualizowano December 21, 2022 · <a href='https://github.com/mastodon/documentation/tree/main/content/pl/_index.md' style="color: #606085;">Popraw tę stronę</a>
+
+      
+        <br />
+
+        Dostępne również w języku:
+
+        
+          <a href="/" style="color: #606085;" hreflang="en">English</a>
+        
+          <a href="/zh-cn/" style="color: #606085;" hreflang="zh-cn">简体中文</a>
+        
+          <a href="/ja/" style="color: #606085;" hreflang="ja">日本語</a>
+        
+      
+    </p>
+
+  </div>
+</main>
+  </div>
+
+  <footer class="footer container">
+  <div class="sponsorship">
+    <div class="container">
+      <h2>
+        Sponsorzy
+      </h2>
+
+      <div class="logo-grid">
+        <div>
+          <a href="https://www.dotcom-monitor.com/es/">
+            <img src="/assets/sponsors/dotcom-monitor-logo.png" alt="Dotcom-Monitor" />
+          </a>
+
+          <a href="https://www.loadview-testing.com/products/jmeter-load-testing/">
+            <img src="/assets/sponsors/LoadView-logo.png" alt="LoadView" />
+          </a>
+
+          <a href="http://www.stevetures.com/">
+            <img src="/assets/sponsors/stephen-tures.jpg" alt="Stephen Tures" />
+          </a>
+
+          <a href="https://swayable.com">
+            <img src="/assets/sponsors/swayable.jpeg" alt="Swayable" />
+          </a>
+
+          <a href="https://www.sponsormotion.com/">
+            <img src="/assets/sponsors/SponsorMotion.png" alt="SponsorMotion" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="legal legal--right">
+    <a href='https://joinmastodon.org'>Dołącz do Mastodona</a> · <a href='https://blog.joinmastodon.org'>Blog</a> · <a href='https://mastodon.social/@Mastodon' target='_blank'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mastodon" viewBox="0 0 16 16"><path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a4 4 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522q0-1.288.66-2.046c.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764q.662.757.661 2.046z"/></svg></a>
+  </p>
+
+  <p class="legal"><a href='https://github.com/mastodon/documentation/tree/main/content/pl/_index.md'>Zobacz źródła</a> · <a href='https://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0</a> · <a href='https://joinmastodon.org/imprint'>Imprint</a></p>
+</footer>
+
+</body>
+
+</html>

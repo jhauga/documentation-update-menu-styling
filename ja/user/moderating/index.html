@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  
+
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+
+
+<link rel='stylesheet' href='/style.min.6f047efea46ea2384fb98ee2d90642926037234cfeb77e270bbd5421bb705db6.css'>
+
+
+<script src='/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
+
+
+  <title>見たくないコンテンツへの対処 - Mastodon documentation</title>
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://docs.joinmastodon.org/ja/user/moderating/">
+
+  
+    <meta name="description" content="ソーシャルメディアをより快適に体験するため、見るものを制御しよう。">
+    <meta property="og:description" content="ソーシャルメディアをより快適に体験するため、見るものを制御しよう。">
+    <meta name="twitter:description" content="ソーシャルメディアをより快適に体験するため、見るものを制御しよう。">
+  
+
+  <meta name="twitter:title" content="見たくないコンテンツへの対処">
+  <meta name="twitter:site" content="@joinmastodon">
+
+  <link rel="canonical" href="https://docs.joinmastodon.org/ja/user/moderating/">
+</head>
+
+<body>
+  <div class="container sidebar-layout">
+    <nav class="sidebar"><a class="brand" href="/">
+  <img class="link-logo" src="/brand.svg" alt="Mastodon" />
+</a>
+
+<input id="mobile-nav-toggle" class="mobile-nav-toggle" type="checkbox">
+<label for="mobile-nav-toggle">
+    <span class="menu-open">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z"/></svg>
+    </span>
+    <span class="menu-close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/></svg>
+    </span>
+</label>
+
+<ul>
+  
+  
+    <li>
+      
+        <a href="/ja/" class="">Mastodon（マストドン）とは？</a>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Mastodonを使う</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/ja/user/signup/" class="">アカウントの登録</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/ja/user/profile/" class="">プロフィールの設定</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/ja/user/posting/" class="">トゥートの投稿</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/ja/user/network/" class="">ネットワーク機能の使用</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/ja/user/moderating/" class="active">見たくないコンテンツへの対処</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/ja/user/discoverability/" class="">自分や他のユーザーの宣伝</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/ja/user/preferences/" class="">環境の設定</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/ja/user/contacts/" class="">その他の設定</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/ja/user/external/" class="">外部からのMasotodonの使用</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/ja/user/moving/" class="">アカウントの引っ越しや削除</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/ja/user/run-your-own/" class="">自分のサーバーを動かすこと</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Mastodonを動かす</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Mastodonアプリを開発する</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Mastodonの開発に貢献する</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">準拠している仕様</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">REST API</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">API Methods</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">API Entities</span>
+      
+
+      
+    </li>
+  
+</ul>
+</nav>
+    <main>
+  <h1>見たくないコンテンツへの対処</h1>
+
+  
+    <p>ソーシャルメディアをより快適に体験するため、見るものを制御しよう。</p>
+  
+  <aside>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#filters">投稿のフィルター</a>
+          <ul>
+            <li><a href="#filter-phrase">キーワードまたはフレーズ</a></li>
+            <li><a href="#filter-expire">有効期限</a></li>
+            <li><a href="#filter-context">除外対象</a></li>
+            <li><a href="#filter-drop">隠すのではなく除外する</a></li>
+            <li><a href="#filter-whole">単語全体にマッチ</a></li>
+          </ul>
+        </li>
+        <li><a href="#blocking-and-muting">ユーザーレベルで実行できること</a>
+          <ul>
+            <li><a href="#hide-boosts">ブーストを非表示</a></li>
+            <li><a href="#mute">ミュート</a></li>
+            <li><a href="#block">ブロック</a></li>
+            <li><a href="#hide-domain">サーバー全体をブロック</a></li>
+          </ul>
+        </li>
+        <li><a href="#report">問題のあるコンテンツをモデレーターに通報する</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+  <div class="e-content">
+    <h2 class="heading" id="filters">
+	<span class="heading__text">投稿のフィルター</span>
+	<a class="heading__anchor-link" href="#filters">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><p>特定のキーワードやフレーズがあるステータスをフィルターすることが可能です。フィルターすることで、それらは自動的に見えなくなります。</p>
+<figure><img src="/assets/image%20%2848%29.png"
+         alt="異なる場所で、さまざまなキーワードをフィルターしている例"/><figcaption>
+            <p>異なる場所で、さまざまなキーワードをフィルターしている例</p>
+        </figcaption>
+</figure>
+
+<p>フィルターを作成または管理するには、設定から「フィルター」を選択します。「新規フィルターを追加」ボタンを押して新しいフィルターを作成できますし、すでに登録しているフィルターを編集したり削除できたりします。登録済みのフィルターは表にまとめられます。</p>
+<figure><img src="/assets/image%20%2814%29.png"
+         alt="フィルターは、有効期限、除外対象、サーバーからの配信削除、および指定した単語全体での一致を指定できる"/><figcaption>
+            <p>フィルターは、有効期限、除外対象、サーバーからの配信削除、および指定した単語全体での一致を指定できる</p>
+        </figcaption>
+</figure>
+
+<p>フィルターには次の設定があります。</p>
+<h3 class="heading" id="filter-phrase">
+	<span class="heading__text">キーワードまたはフレーズ</span>
+	<a class="heading__anchor-link" href="#filter-phrase">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>これは一致させたい文字列です。キーワードはCW、メディアの説明、投票の選択肢を含め、どんなステータスの中身でも検索されるでしょう。</p>
+<h3 class="heading" id="filter-expire">
+	<span class="heading__text">有効期限</span>
+	<a class="heading__anchor-link" href="#filter-expire">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>必要に応じて、有効時間を定めてフィルターを適用できます。期限切れのフィルターは自動的に削除されません。新しい有効期限を設定することで（または有効期限を「無期限」に戻すことで）再度有効にできます。</p>
+<h3 class="heading" id="filter-context">
+	<span class="heading__text">除外対象</span>
+	<a class="heading__anchor-link" href="#filter-context">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>フィルターが適用される場所を選択できます。</p>
+<ul>
+<li>ホームタイムライン ＝ 一致するステータスはホームフィードから削除されます。</li>
+<li>通知 ＝ 一致する通知は表示されなくなります。</li>
+<li>公開タイムライン ＝ 一致するステータスはローカルタイムライン／連合タイムラインに現れなくなります。</li>
+<li>会話 = 一致するステータスはスレッドと詳細表示で隠されます。</li>
+</ul>
+<h3 class="heading" id="filter-drop">
+	<span class="heading__text">隠すのではなく除外する</span>
+	<a class="heading__anchor-link" href="#filter-drop">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>フィルターの実行は普段クライアント側で行われます。そのためフィルターを無効にすることで、フィルターされたステータスを再び表示できます。しかし「隠すのではなく除外する」を有効にすると、一致するステータスが完全に消えさり、ホームや通知に配信されなくなります。</p>
+<h3 class="heading" id="filter-whole">
+	<span class="heading__text">単語全体にマッチ</span>
+	<a class="heading__anchor-link" href="#filter-whole">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>フィルターは通常、単語の途中にあるかどうかに関係なく、該当の文字を含んでいるすべてのステータスに適用されます。「単語全体にマッチ」を有効にすると、スペースまたは英数字以外の文字の間にキーワードがある場合にのみフィルターが適用されます。</p>
+<h2 class="heading" id="blocking-and-muting">
+	<span class="heading__text">ユーザーレベルで実行できること</span>
+	<a class="heading__anchor-link" href="#blocking-and-muting">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><figure><img src="/assets/image%20%2824%29.png"
+         alt="ユーザープロフィールにあるドロップダウンメニューでは、さまざまなことを設定できる"/><figcaption>
+            <p>ユーザープロフィールにあるドロップダウンメニューでは、さまざまなことを設定できる</p>
+        </figcaption>
+</figure>
+
+<h3 class="heading" id="hide-boosts">
+	<span class="heading__text">ブーストを非表示</span>
+	<a class="heading__anchor-link" href="#hide-boosts">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>誰かのブーストを隠したい場合、ホームフィードでそのブーストを見えなくできます。この選択肢は、現在フォローしているユーザープロフィール上でのみ表示されます。</p>
+<h3 class="heading" id="mute">
+	<span class="heading__text">ミュート</span>
+	<a class="heading__anchor-link" href="#mute">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><figure><img src="/assets/image%20%2852%29.png"
+         alt="ミュートされたアカウントの例"/><figcaption>
+            <p>ミュートされたアカウントの例</p>
+        </figcaption>
+</figure>
+
+<p>ミュートするときは、通知をミュートするかどうかを選択できます。通知をミュートしないミュートは、次の場面でそのユーザーを隠します。</p>
+<ul>
+<li>ホームフィードで、そのユーザーが見えなくなります。</li>
+<li>そのユーザーの投稿を他の人がブーストしても見えなくなります。</li>
+<li>そのユーザーに他の人がメンションしている投稿は見えなくなります。</li>
+<li>公開タイムラインでそのユーザーが見えなくなります。</li>
+</ul>
+<p>そのユーザーからの通知もミュートすることを選択した場合、上記に加えてそのユーザーからの通知を見えなくなります。</p>
+<p>ミュートされたユーザーはミュートされていることを知る方法を持ちあわせていません。</p>
+<h3 class="heading" id="block">
+	<span class="heading__text">ブロック</span>
+	<a class="heading__anchor-link" href="#block">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><figure><img src="/assets/image%20%2836%29.png"
+         alt="ブロックされたアカウントの例"/><figcaption>
+            <p>ブロックされたアカウントの例</p>
+        </figcaption>
+</figure>
+
+<p>ブロックは、次の場面でユーザーを隠します。</p>
+<ul>
+<li>ホームフィードでそのユーザーが見えなくなります。</li>
+<li>そのユーザーの投稿を他の人がブーストしても見えなくなります。</li>
+<li>そのユーザーに他の人がメンションしている投稿は見えなくなります。</li>
+<li>公開タイムラインでそのユーザーが見えなくなります。</li>
+<li>そのユーザーからの通知が見えなくなります。</li>
+</ul>
+<p>これに加えて、ブロックされたユーザー側では：</p>
+<ul>
+<li>そのユーザーは、あなたのフォローが強制的に解除されます。</li>
+<li>そのユーザーは、あなたをフォローできなくります。</li>
+<li>そのユーザーは、あなたの投稿が誰かにブーストされても見えなくなります。</li>
+<li>そのユーザーは、公開タイムラインであなたを見つけられなくなります。</li>
+</ul>
+<p>もしあなたとブロックされたユーザーが同じサーバーにいる場合、ブロックされたユーザーがログインしている間、あなたのプロフィール上であなたの投稿を見られなくなるでしょう。</p>
+<h3 class="heading" id="hide-domain">
+	<span class="heading__text">サーバー全体をブロック</span>
+	<a class="heading__anchor-link" href="#hide-domain">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>![]({{ relUrl &ldquo;/assets/image%20%2861%29.png&rdquo; }})</p>
+<p>サーバー全体をブロックする場合：</p>
+<ul>
+<li>公開タイムライン上で、そのサーバーからの投稿が見えなくなります。</li>
+<li>あなたのホームフィードで、そのサーバーにいる人の投稿のブーストは見えなくなります。</li>
+<li>そのサーバーからの通知は見えなくなります。</li>
+<li>そのサーバーにいるフォロワーと思われる人すべてをなくします。</li>
+</ul>
+<h2 class="heading" id="report">
+	<span class="heading__text">問題のあるコンテンツをモデレーターに通報する</span>
+	<a class="heading__anchor-link" href="#report">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><figure><img src="/assets/image%20%283%29.png"
+         alt="通報のモーダル画面では、具体的なステータスの選択、コメントの追加、レポートの転送ができる"/><figcaption>
+            <p>通報のモーダル画面では、具体的なステータスの選択、コメントの追加、レポートの転送ができる</p>
+        </figcaption>
+</figure>
+
+<p>あなたのウェブサイトのルールに違反しているステータスまたはユーザーを見つけた場合、あなたのサイトのモデレーターにそのユーザーを通報できます。ユーザープロフィールのドロップダウンメニューまたはステータのスドロップダウンメニューから「通報」の選択肢をクリックすると、通報のモーダル画面が開きます。ここでは、このアカウントを通報する理由についてのコメントを追加できます（追加するべきです）。アカウントを通報する理由について追加の文脈を示すために、はっきりと問題のあるステータスを指定できます。また、その行為がリモートのウェブサイトのルールに違反している場合、そのサイトのモデレーターに通報を転送することもできます。</p>
+
+
+    <p style="color: #606085;">
+      最終更新 December 21, 2022 · <a href='https://github.com/mastodon/documentation/tree/main/content/ja/user%5cmoderating.md' style="color: #606085;">このページを改善する</a>
+
+      
+        <br />
+
+        他の言語も利用可能：
+
+        
+          <a href="/user/moderating/" style="color: #606085;" hreflang="en">English</a>
+        
+          <a href="/zh-cn/user/moderating/" style="color: #606085;" hreflang="zh-cn">简体中文</a>
+        
+          <a href="/pl/user/moderating/" style="color: #606085;" hreflang="pl">Polski</a>
+        
+      
+    </p>
+
+  </div>
+</main>
+  </div>
+
+  <footer class="footer container">
+  <div class="sponsorship">
+    <div class="container">
+      <h2>
+        Sponsored by
+      </h2>
+
+      <div class="logo-grid">
+        <div>
+          <a href="https://www.dotcom-monitor.com/es/">
+            <img src="/assets/sponsors/dotcom-monitor-logo.png" alt="Dotcom-Monitor" />
+          </a>
+
+          <a href="https://www.loadview-testing.com/products/jmeter-load-testing/">
+            <img src="/assets/sponsors/LoadView-logo.png" alt="LoadView" />
+          </a>
+
+          <a href="http://www.stevetures.com/">
+            <img src="/assets/sponsors/stephen-tures.jpg" alt="Stephen Tures" />
+          </a>
+
+          <a href="https://swayable.com">
+            <img src="/assets/sponsors/swayable.jpeg" alt="Swayable" />
+          </a>
+
+          <a href="https://www.sponsormotion.com/">
+            <img src="/assets/sponsors/SponsorMotion.png" alt="SponsorMotion" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="legal legal--right">
+    <a href='https://joinmastodon.org'>Mastodonに参加する</a> · <a href='https://blog.joinmastodon.org'>ブログ</a> · <a href='https://mastodon.social/@Mastodon' target='_blank'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mastodon" viewBox="0 0 16 16"><path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a4 4 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522q0-1.288.66-2.046c.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764q.662.757.661 2.046z"/></svg></a>
+  </p>
+
+  <p class="legal"><a href='https://github.com/mastodon/documentation/tree/main/content/ja/user%5cmoderating.md'>ソースコードを見る</a> · <a href='https://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0</a> · <a href='https://joinmastodon.org/imprint'>インプリメント</a></p>
+</footer>
+
+</body>
+
+</html>

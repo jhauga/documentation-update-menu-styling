@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+
+
+<link rel='stylesheet' href='/style.min.6f047efea46ea2384fb98ee2d90642926037234cfeb77e270bbd5421bb705db6.css'>
+
+
+<script src='/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
+
+
+  <title>Set your preferences - Mastodon documentation</title>
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://docs.joinmastodon.org/user/preferences/">
+
+  
+    <meta name="description" content="Customize things just the way you like them.">
+    <meta property="og:description" content="Customize things just the way you like them.">
+    <meta name="twitter:description" content="Customize things just the way you like them.">
+  
+
+  <meta name="twitter:title" content="Set your preferences">
+  <meta name="twitter:site" content="@joinmastodon">
+
+  <link rel="canonical" href="https://docs.joinmastodon.org/user/preferences/">
+</head>
+
+<body>
+  <div class="container sidebar-layout">
+    <nav class="sidebar"><a class="brand" href="/">
+  <img class="link-logo" src="/brand.svg" alt="Mastodon" />
+</a>
+
+<input id="mobile-nav-toggle" class="mobile-nav-toggle" type="checkbox">
+<label for="mobile-nav-toggle">
+    <span class="menu-open">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z"/></svg>
+    </span>
+    <span class="menu-close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/></svg>
+    </span>
+</label>
+
+<ul>
+  
+  
+    <li>
+      
+        <a href="/" class="">What is Mastodon?</a>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Using Mastodon</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/user/signup/" class="">Signing up for an account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/profile/" class="">Setting up your profile</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/posting/" class="">Posting to your profile</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/network/" class="">Using the network features</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/moderating/" class="">Dealing with unwanted content</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/discoverability/" class="">Promoting yourself and others</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/preferences/" class="active">Set your preferences</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/contacts/" class="">More settings</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/external/" class="">Using Mastodon externally</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/moving/" class="">Moving or leaving accounts</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/run-your-own/" class="">Running your own server</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Running Mastodon</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/admin/prerequisites/" class="">Preparing your machine</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/install/" class="">Installing from source</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/config/" class="">Configuring your environment</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/elasticsearch/" class="">Configuring full-text search</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/optional/" class="">Installing optional features</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/admin/optional/object-storage/" class="">Object storage</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/admin/optional/tor/" class="">Onion services</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/admin/optional/captcha/" class="">Captcha</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/admin/optional/sso/" class="">Single Sign On</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/admin/setup/" class="">Setting up your new instance</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/tootctl/" class="">Using the admin CLI</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/upgrading/" class="">Upgrading to a new release</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/backups/" class="">Backing up your server</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/migrating/" class="">Migrating to a new machine</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/scaling/" class="">Scaling up your server</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/moderation/" class="">Moderation actions</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/troubleshooting/" class="">Troubleshooting errors</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/admin/troubleshooting/index-corruption/" class="">Database index corruption</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/admin/roles/" class="">Roles</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Developing Mastodon apps</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/client/intro/" class="">Getting started with the API</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/public/" class="">Playing with public data</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/token/" class="">Obtaining client app access</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/authorized/" class="">Logging in with an account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/libraries/" class="">Libraries and implementations</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Contributing to Mastodon</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/dev/overview/" class="">Technical overview</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/setup/" class="">Setting up a dev environment</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/code/" class="">Code structure</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/routes/" class="">Routes</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/disclosure/" class="">Bug bounties and responsible disclosure</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Spec compliance</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/spec/activitypub/" class="">ActivityPub</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/webfinger/" class="">WebFinger</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/security/" class="">Security</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/microformats/" class="">Microformats</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/oauth/" class="">OAuth</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/bearcaps/" class="">Bearcaps</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">REST API</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/api/guidelines/" class="">Guidelines and best practices</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/api/oauth-scopes/" class="">OAuth Scopes</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/api/rate-limits/" class="">Rate limits</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">API Methods</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/methods/apps/" class="">apps</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/oauth/" class="">oauth</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/emails/" class="">emails</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/accounts/" class="">accounts</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/bookmarks/" class="">bookmarks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/favourites/" class="">favourites</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/mutes/" class="">mutes</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/blocks/" class="">blocks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/domain_blocks/" class="">domain_blocks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/filters/" class="">filters</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/reports/" class="">reports</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/follow_requests/" class="">follow_requests</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/endorsements/" class="">endorsements</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/featured_tags/" class="">featured_tags</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/preferences/" class="">preferences</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/followed_tags/" class="">followed_tags</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/suggestions/" class="">suggestions</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/tags/" class="">tags</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/profile/" class="">profile</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/methods/statuses/" class="">statuses</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/media/" class="">media</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/polls/" class="">polls</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/scheduled_statuses/" class="">scheduled_statuses</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/timelines/" class="">timelines</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/conversations/" class="">conversations</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/lists/" class="">lists</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/markers/" class="">markers</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/streaming/" class="">streaming</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/notifications/" class="">notifications</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/push/" class="">push</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/search/" class="">search</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/methods/instance/" class="">instance</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/trends/" class="">trends</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/directory/" class="">directory</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/custom_emojis/" class="">custom_emojis</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/announcements/" class="">announcements</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/admin/" class="">admin</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/admin/accounts/" class="">accounts</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/canonical_email_blocks/" class="">canonical_email_blocks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/dimensions/" class="">dimensions</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/domain_allows/" class="">domain_allows</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/domain_blocks/" class="">domain_blocks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/email_domain_blocks/" class="">email_domain_blocks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/ip_blocks/" class="">ip_blocks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/measures/" class="">measures</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/reports/" class="">reports</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/retention/" class="">retention</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/admin/trends/" class="">trends</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/proofs/" class="">proofs</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/methods/oembed/" class="">oembed</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">API Entities</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/entities/Account/" class="">Account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/AccountWarning/" class="">AccountWarning</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_Account/" class="">Admin::Account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_CanonicalEmailBlock/" class="">Admin::CanonicalEmailBlock</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_Cohort/" class="">Admin::Cohort</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_Dimension/" class="">Admin::Dimension</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_DomainAllow/" class="">Admin::DomainAllow</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_DomainBlock/" class="">Admin::DomainBlock</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_EmailDomainBlock/" class="">Admin::EmailDomainBlock</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_Ip/" class="">Admin::Ip</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_IpBlock/" class="">Admin::IpBlock</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_Measure/" class="">Admin::Measure</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Admin_Report/" class="">Admin::Report</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Announcement/" class="">Announcement</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Appeal/" class="">Appeal</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Application/" class="">Application</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Context/" class="">Context</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Conversation/" class="">Conversation</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/CustomEmoji/" class="">CustomEmoji</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/DomainBlock/" class="">DomainBlock</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Error/" class="">Error</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/ExtendedDescription/" class="">ExtendedDescription</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/FamiliarFollowers/" class="">FamiliarFollowers</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/FeaturedTag/" class="">FeaturedTag</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Filter/" class="">Filter</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/FilterKeyword/" class="">FilterKeyword</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/FilterResult/" class="">FilterResult</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/FilterStatus/" class="">FilterStatus</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/IdentityProof/" class="">IdentityProof</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Instance/" class="">Instance</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/List/" class="">List</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Marker/" class="">Marker</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/MediaAttachment/" class="">MediaAttachment</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Notification/" class="">Notification</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/NotificationPolicy/" class="">NotificationPolicy</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/NotificationRequest/" class="">NotificationRequest</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Poll/" class="">Poll</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Preferences/" class="">Preferences</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/PreviewCard/" class="">PreviewCard</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/PreviewCardAuthor/" class="">PreviewCardAuthor</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Reaction/" class="">Reaction</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Relationship/" class="">Relationship</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/RelationshipSeveranceEvent/" class="">RelationshipSeveranceEvent</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Report/" class="">Report</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Role/" class="">Role</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Rule/" class="">Rule</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/ScheduledStatus/" class="">ScheduledStatus</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Search/" class="">Search</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Status/" class="">Status</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/StatusEdit/" class="">StatusEdit</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/StatusSource/" class="">StatusSource</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Suggestion/" class="">Suggestion</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Tag/" class="">Tag</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Token/" class="">Token</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/Translation/" class="">Translation</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/V1_Filter/" class="">V1::Filter</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/V1_Instance/" class="">V1::Instance</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/V1_NotificationPolicy/" class="">V1::NotificationPolicy</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/WebPushSubscription/" class="">WebPushSubscription</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+</ul>
+</nav>
+    <main>
+  <h1>Set your preferences</h1>
+
+  
+    <p>Customize things just the way you like them.</p>
+  
+  <aside>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#interface">Customizing the user interface</a>
+          <ul>
+            <li><a href="#theme">Choose a theme</a></li>
+            <li><a href="#layout">Choose your layout</a></li>
+            <li><a href="#confirm">Confirmation dialogs</a></li>
+            <li><a href="#sensitive">Sensitive content</a></li>
+          </ul>
+        </li>
+        <li><a href="#notifications">Controlling your notifications</a>
+          <ul>
+            <li><a href="#email">Sending emails</a></li>
+            <li><a href="#hide-notifications">Hiding certain notifications</a></li>
+          </ul>
+        </li>
+        <li><a href="#misc">Miscellaneous options</a>
+          <ul>
+            <li><a href="#posting">Setting defaults for post privacy, post language, and media sensitivity</a></li>
+            <li><a href="#languages">Filtering languages on public timelines</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+  <div class="e-content">
+    <h2 class="heading" id="interface">
+	<span class="heading__text">Customizing the user interface</span>
+	<a class="heading__anchor-link" href="#interface">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><h3 class="heading" id="theme">
+	<span class="heading__text">Choose a theme</span>
+	<a class="heading__anchor-link" href="#theme">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Mastodon defaults to a dark theme, but a light or high-contrast theme can be selected.</p>
+<figure><img src="/assets/light-theme.jpg"
+         alt="Mastodon light theme"/><figcaption>
+            <p>Mastodon light theme</p>
+        </figcaption>
+</figure>
+
+<h3 class="heading" id="layout">
+	<span class="heading__text">Choose your layout</span>
+	<a class="heading__anchor-link" href="#layout">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Mastodon defaults to a simple, one-column layout with a compose box on the left and a column switcher on the right. You can choose to enable the advanced web interface, which allows you view and pin multiple columns at the same time.</p>
+<figure><img src="/assets/advanced-web-ui.jpg"
+         alt="The advanced web interface"/><figcaption>
+            <p>The advanced web interface</p>
+        </figcaption>
+</figure>
+
+<p>In either interface, updates will load automatically as new posts are available. You can enable Slow Mode to instead show a banner at the top of the column indicating the number of new items available, which will be loaded only when you click the banner.</p>
+<p>For accessibility reasons, the auto-play of animated GIFs is disabled by default. You can enable animated GIFs if you want to see animations. You can also reduce motion of animations throughout the UI.</p>
+<p>Trending hashtags can be shown or hidden below the getting started column in the advanced UI, or below the column switcher in the simple UI (only when there is enough space to display them).</p>
+<h3 class="heading" id="confirm">
+	<span class="heading__text">Confirmation dialogs</span>
+	<a class="heading__anchor-link" href="#confirm">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>You can choose to require confirmation before performing certain actions. Currently, confirmations can be set before performing the following actions:</p>
+<ul>
+<li>Unfollow</li>
+<li>Boost</li>
+<li>Delete</li>
+</ul>
+<h3 class="heading" id="sensitive">
+	<span class="heading__text">Sensitive content</span>
+	<a class="heading__anchor-link" href="#sensitive">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>By default, any media marked as sensitive is hidden behind a click-through overlay. You can also choose to always show/hide media behind this overlay, regardless of whether it is marked as sensitive.</p>
+<p>Hidden and unloaded media uses a colorful gradient provided by the BlurHash algorithm, which uses the colors of the image but blurs the details. These gradients can be disabled.</p>
+<figure><img src="/assets/blurhash.jpg"
+         alt="An example blurhash thumbnail"/><figcaption>
+            <p>An example blurhash thumbnail</p>
+        </figcaption>
+</figure>
+
+<p>Posts with content warnings are collapsed by default, but you can choose to always expand the warnings so that the full post is displayed.</p>
+<h2 class="heading" id="notifications">
+	<span class="heading__text">Controlling your notifications</span>
+	<a class="heading__anchor-link" href="#notifications">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><h3 class="heading" id="email">
+	<span class="heading__text">Sending emails</span>
+	<a class="heading__anchor-link" href="#email">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>You can choose to receive email notifications according to the type of notification you receive within Mastodon. The following notification types are available to enable:</p>
+<ul>
+<li>Follows</li>
+<li>Follow requests</li>
+<li>Boosts</li>
+<li>Favourites</li>
+<li>Mentions</li>
+</ul>
+<p>You can also enable digest emails, which will provide you with an overview of notifications received during periods of long inactivity.</p>
+<h3 class="heading" id="hide-notifications">
+	<span class="heading__text">Hiding certain notifications</span>
+	<a class="heading__anchor-link" href="#hide-notifications">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>You can choose to not receive notifications from people you don&rsquo;t follow, or from people who don&rsquo;t follow you. This will cause replies, favourites, boosts, and other interactions to not be shown to you.</p>
+<p>You can also choose to not receive notifications when you receive a direct message from people you don&rsquo;t follow.</p>
+<h2 class="heading" id="misc">
+	<span class="heading__text">Miscellaneous options</span>
+	<a class="heading__anchor-link" href="#misc">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><p>If you opt out of search engine indexing, a <code>noindex</code> flag will be added to your public profile and status pages.</p>
+<p>You can choose to hide your network, which will make your following and follower lists private to you only.</p>
+<figure><img src="/assets/hidden-network.jpg"
+         alt="A profile that has opted to hide its network"/><figcaption>
+            <p>A profile that has opted to hide its network</p>
+        </figcaption>
+</figure>
+
+<p>If you want to see posts that are boosted multiple times be reinserted into your feed at the top, you can disable boost grouping in timelines.</p>
+<h3 class="heading" id="posting">
+	<span class="heading__text">Setting defaults for post privacy, post language, and media sensitivity</span>
+	<a class="heading__anchor-link" href="#posting">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Posts default to public privacy. You can choose to default new posts as unlisted or followers-only instead. For an explanation of post privacy levels, see <a href="../posting#privacy">Posting to your Mastodon profile &gt; Publishing levels</a>.</p>
+<p>If you primarily or exclusively post in a certain language, it is a good idea to set that language here.</p>
+<p>If you often post sensitive media, you can choose to always mark your media as sensitive.</p>
+<h3 class="heading" id="languages">
+	<span class="heading__text">Filtering languages on public timelines</span>
+	<a class="heading__anchor-link" href="#languages">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>You can choose to only show posts in certain detected languages while browsing the public timelines. However, note that language detection can be very imprecise, so you may still see some posts in a disabled language, or miss some posts from enabled languages.</p>
+
+
+    <p style="color: #606085;">
+      Last updated December 5, 2023 · <a href='https://github.com/mastodon/documentation/tree/main/content/en/user%5cpreferences.md' style="color: #606085;">Improve this page</a>
+
+      
+        <br />
+
+        Also available in:
+
+        
+          <a href="/zh-cn/user/preferences/" style="color: #606085;" hreflang="zh-cn">简体中文</a>
+        
+          <a href="/ja/user/preferences/" style="color: #606085;" hreflang="ja">日本語</a>
+        
+          <a href="/pl/user/preferences/" style="color: #606085;" hreflang="pl">Polski</a>
+        
+      
+    </p>
+
+  </div>
+</main>
+  </div>
+
+  <footer class="footer container">
+  <div class="sponsorship">
+    <div class="container">
+      <h2>
+        Sponsored by
+      </h2>
+
+      <div class="logo-grid">
+        <div>
+          <a href="https://www.dotcom-monitor.com/es/">
+            <img src="/assets/sponsors/dotcom-monitor-logo.png" alt="Dotcom-Monitor" />
+          </a>
+
+          <a href="https://www.loadview-testing.com/products/jmeter-load-testing/">
+            <img src="/assets/sponsors/LoadView-logo.png" alt="LoadView" />
+          </a>
+
+          <a href="http://www.stevetures.com/">
+            <img src="/assets/sponsors/stephen-tures.jpg" alt="Stephen Tures" />
+          </a>
+
+          <a href="https://swayable.com">
+            <img src="/assets/sponsors/swayable.jpeg" alt="Swayable" />
+          </a>
+
+          <a href="https://www.sponsormotion.com/">
+            <img src="/assets/sponsors/SponsorMotion.png" alt="SponsorMotion" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="legal legal--right">
+    <a href='https://joinmastodon.org'>Join Mastodon</a> · <a href='https://blog.joinmastodon.org'>Blog</a> · <a href='https://mastodon.social/@Mastodon' target='_blank'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mastodon" viewBox="0 0 16 16"><path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a4 4 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522q0-1.288.66-2.046c.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764q.662.757.661 2.046z"/></svg></a>
+  </p>
+
+  <p class="legal"><a href='https://github.com/mastodon/documentation/tree/main/content/en/user%5cpreferences.md'>View source</a> · <a href='https://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0</a> · <a href='https://joinmastodon.org/imprint'>Imprint</a></p>
+</footer>
+
+</body>
+
+</html>

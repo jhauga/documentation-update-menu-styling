@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  
+
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+
+
+<link rel='stylesheet' href='/style.min.6f047efea46ea2384fb98ee2d90642926037234cfeb77e270bbd5421bb705db6.css'>
+
+
+<script src='/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
+
+
+  <title>Zmień swoje ustawienia - Mastodon documentation</title>
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://docs.joinmastodon.org/pl/user/preferences/">
+
+  
+    <meta name="description" content="Dostosuj wszystko tak, jak lubisz.">
+    <meta property="og:description" content="Dostosuj wszystko tak, jak lubisz.">
+    <meta name="twitter:description" content="Dostosuj wszystko tak, jak lubisz.">
+  
+
+  <meta name="twitter:title" content="Zmień swoje ustawienia">
+  <meta name="twitter:site" content="@joinmastodon">
+
+  <link rel="canonical" href="https://docs.joinmastodon.org/pl/user/preferences/">
+</head>
+
+<body>
+  <div class="container sidebar-layout">
+    <nav class="sidebar"><a class="brand" href="/">
+  <img class="link-logo" src="/brand.svg" alt="Mastodon" />
+</a>
+
+<input id="mobile-nav-toggle" class="mobile-nav-toggle" type="checkbox">
+<label for="mobile-nav-toggle">
+    <span class="menu-open">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z"/></svg>
+    </span>
+    <span class="menu-close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/></svg>
+    </span>
+</label>
+
+<ul>
+  
+  
+    <li>
+      
+        <a href="/pl/" class="">Czym jest Mastodon?</a>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Korzystaj z Mastodona</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/pl/user/signup/" class="">Zarejestruj konto</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/profile/" class="">Dostosuj swój profil</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/posting/" class="">Utwórz wpisy</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/network/" class="">Korzystaj z funkcjonalności sieci</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/moderating/" class="">Radzenie sobie z niechcianą treścią</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/discoverability/" class="">Promuj siebie i innych</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/preferences/" class="active">Zmień swoje ustawienia</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/contacts/" class="">Więcej ustawień</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/external/" class="">Korzystaj z Mastodona zewnętrznie</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/moving/" class="">Przenieś lub opuść konto</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/run-your-own/" class="">Prowadź swój własny serwer</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Uruchamianie Mastodona</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Twórz aplikacje dla Mastodona</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Współtwórz Mastodona</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Zgodność ze specyfikacją</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">REST API</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Metody API</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Jednostki API</span>
+      
+
+      
+    </li>
+  
+</ul>
+</nav>
+    <main>
+  <h1>Zmień swoje ustawienia</h1>
+
+  
+    <p>Dostosuj wszystko tak, jak lubisz.</p>
+  
+  <aside>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#interface">Dostosowywanie interfejsu użytkownika</a>
+          <ul>
+            <li><a href="#theme">Wybierz motyw</a></li>
+            <li><a href="#layout">Wybierz układ</a></li>
+            <li><a href="#confirm">Dialogi potwierdzenia</a></li>
+            <li><a href="#sensitive">Wrażliwa zawartość</a></li>
+          </ul>
+        </li>
+        <li><a href="#notifications">Kontrolowanie powiadomień</a>
+          <ul>
+            <li><a href="#email">Wysyłanie e-maili</a></li>
+            <li><a href="#hide-notifications">Ukrywanie niektórych powiadomień</a></li>
+          </ul>
+        </li>
+        <li><a href="#misc">Pozostałe</a>
+          <ul>
+            <li><a href="#posting">Domyślne ustawienia wpisów</a></li>
+            <li><a href="#languages">Filtrowanie języków na publicznych osiach czasu</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+  <div class="e-content">
+    <h2 class="heading" id="interface">
+	<span class="heading__text">Dostosowywanie interfejsu użytkownika</span>
+	<a class="heading__anchor-link" href="#interface">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><h3 class="heading" id="theme">
+	<span class="heading__text">Wybierz motyw</span>
+	<a class="heading__anchor-link" href="#theme">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Mastodon domyślnie korzysta z ciemnego motywu, ale może zostać wybrany też jasny lub wysokokontrastowy motyw.</p>
+<figure><img src="/assets/light-theme.jpg"
+         alt="Jasny motyw Mastodona"/><figcaption>
+            <p>Jasny motyw Mastodona</p>
+        </figcaption>
+</figure>
+
+<h3 class="heading" id="layout">
+	<span class="heading__text">Wybierz układ</span>
+	<a class="heading__anchor-link" href="#layout">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Mastodon domyślnie wybiera prosty, jednokolumnowy układ z polem tworzenia wpisów po lewej i wyborem kolumny po prawej. Możesz wybrać zaawansowany interfejs, pozwalający na wyświetlanie i przypięcie wielu kolumn jednocześnie.</p>
+<figure><img src="/assets/advanced-web-ui.jpg"
+         alt="Zaawansowany interfejs"/><figcaption>
+            <p>Zaawansowany interfejs</p>
+        </figcaption>
+</figure>
+
+<p>W obu interfejsach aktualizacje ładują się, gdy tylko dostępne są nowe wpisy. Możesz włączyć Tryb spowolniony, który zamiast tego pokazuje na górze kolumny komunikat wskazujący liczbę nowych dostępnych wpisów, które zostaną załadowane po kliknięciu tego komunikatu.</p>
+<p>Z uwagi na dostępność, autoodtwarzanie animowanych GIF-ów jest domyślnie wyłączone. Możesz włączyć animowane GIF-y, jeżeli chcesz widzieć animacje. Możesz też ograniczyć ilość animacji w UI.</p>
+<p>Trendujące hashtagi mogą być wyświetlane lub ukryte pod kolumną „Rozpocznij” w zaawansowanym UI lub pod wyborem kolumn w uproszczonym UI (tylko jeśli jest wystarczająco miejsca, aby je wyświetlić).</p>
+<h3 class="heading" id="confirm">
+	<span class="heading__text">Dialogi potwierdzenia</span>
+	<a class="heading__anchor-link" href="#confirm">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Możesz wybrać, aby wymagać potwierdzenia przed wykonaniem pewnych akcji. Obecnie, potwierdzenia mogą zostać ustawione dla następujących działań:</p>
+<ul>
+<li>Cofnięcie obserwacji</li>
+<li>Udostępnienie</li>
+<li>Usunięcie</li>
+</ul>
+<h3 class="heading" id="sensitive">
+	<span class="heading__text">Wrażliwa zawartość</span>
+	<a class="heading__anchor-link" href="#sensitive">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Domyślnie, media oznaczone jako wrażliwe są ukrywane i wymagają kliknięcia ich. Możesz wybrać, aby automatycznie ukrywać wszystkie media za taką nakładką, lub automatycznie pokazywać je, niezależnie czy są ustawione jako wrażliwe.</p>
+<p>Ukryte i niezaładowane media używają kolorowych gradientów korzystających z algorytmu BlurHash, korzystającego z kolorów obrazu, lecz rozmywających detale. Te gradienty mogą być wyłączone.</p>
+<figure><img src="/assets/blurhash.jpg"
+         alt="Przykład miniaturki z blurhashem"/><figcaption>
+            <p>Przykład miniaturki z blurhashem</p>
+        </figcaption>
+</figure>
+
+<p>Wpisy z ostrzeżeniami o zawartości są domyślnie zwijane, ale możesz wybrać aby zawsze wyświetlany był pełny wpis.</p>
+<h2 class="heading" id="notifications">
+	<span class="heading__text">Kontrolowanie powiadomień</span>
+	<a class="heading__anchor-link" href="#notifications">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><h3 class="heading" id="email">
+	<span class="heading__text">Wysyłanie e-maili</span>
+	<a class="heading__anchor-link" href="#email">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Możesz wybrać, aby dostawać powiadomienia e-mail według typów powiadomień, które otrzymujesz na Mastodonie. Możesz włączyć maile dla poszczególnych rodzajów powiadomień:</p>
+<ul>
+<li>Obserwacje</li>
+<li>Prośby o możliwość obserwacji</li>
+<li>Udostępnienia</li>
+<li>Ulubione</li>
+<li>Wspomnienia</li>
+</ul>
+<p>Możesz też włączyć maile z przeglądami, które zawierają przegląd powiadomień otrzymanych podczas dłuższej nieaktywności.</p>
+<h3 class="heading" id="hide-notifications">
+	<span class="heading__text">Ukrywanie niektórych powiadomień</span>
+	<a class="heading__anchor-link" href="#hide-notifications">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Możesz wybrać, aby nie otrzymywać powiadomień od osób, których nie obserwujesz, lub osób, które Cię nie obserwują. Sprawi to, że te odpowiedzi, polubienia, udostępnienia i inne interakcje nie będą Ci pokazywane.</p>
+<p>Możesz też wybrać, aby nie otrzymywać powiadomień, gdy otrzymasz wiadomość bezpośrednią od osoby, której nie obserwujesz.</p>
+<h2 class="heading" id="misc">
+	<span class="heading__text">Pozostałe</span>
+	<a class="heading__anchor-link" href="#misc">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><p>Jeżeli zdecydujesz się wypisać się z indeksowania w wyszukiwarkach, flaga <code>noindex</code> zostanie dodana do strony Twojego profilu i Twoich wpisów.</p>
+<p>Możesz ukryć swoją sieć, dzięki czemu lista obserwujących Cię i obserwowanych przez Ciebie będzie widoczna tylko dla Ciebie.</p>
+<figure><img src="/assets/hidden-network.jpg"
+         alt="Profil, którego właściciel zdecydował się ukryć swoją sieć"/><figcaption>
+            <p>Profil, którego właściciel zdecydował się ukryć swoją sieć</p>
+        </figcaption>
+</figure>
+
+<p>Jeżeli chcesz widzieć wpisy, które zostały udostępnione wielokrotnie na osi czasu, możesz wyłączyć grupowanie podbić w osiach czasu.</p>
+<h3 class="heading" id="posting">
+	<span class="heading__text">Domyślne ustawienia wpisów</span>
+	<a class="heading__anchor-link" href="#posting">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Wpisy domyślnie są ustawiane jako publiczne. Możesz wybrać, aby nowe wpisy były domyślnie niewidoczne lub tylko dla obserwujących. Dla lepszego wyjaśnienia poziomów prywatności przeczytaj <a href="../posting#privacy">Tworzenie wpisów &gt; Poziomy publikacji</a>.</p>
+<p>Domyślnie, język Twoich wpisów jest wykrywany automatycznie, ale to wykrywanie nie jest zbyt precyzyjne. Jeżeli piszesz głównie bądź tylko w jednym języku, możesz go tu ustawić.</p>
+<p>Jeżeli często publikujesz zawartość wrażliwą, możesz wybrać, aby zawsze oznaczać Twoje media jako wrażliwe.</p>
+<h3 class="heading" id="languages">
+	<span class="heading__text">Filtrowanie języków na publicznych osiach czasu</span>
+	<a class="heading__anchor-link" href="#languages">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Możesz wybrać, aby wyświetlały się jedynie wpisy w określonych językach, kiedy przeglądasz publiczne osie czasu. Pamiętaj jednak, że wykrywanie języków może być bardzo niedokładne i możesz wciąż widzieć wpisy w wyłączonym języku lub ominąć wpisy we włączonych językach.</p>
+
+
+    <p style="color: #606085;">
+      Ostatnio aktualizowano December 21, 2022 · <a href='https://github.com/mastodon/documentation/tree/main/content/pl/user%5cpreferences.md' style="color: #606085;">Popraw tę stronę</a>
+
+      
+        <br />
+
+        Dostępne również w języku:
+
+        
+          <a href="/user/preferences/" style="color: #606085;" hreflang="en">English</a>
+        
+          <a href="/zh-cn/user/preferences/" style="color: #606085;" hreflang="zh-cn">简体中文</a>
+        
+          <a href="/ja/user/preferences/" style="color: #606085;" hreflang="ja">日本語</a>
+        
+      
+    </p>
+
+  </div>
+</main>
+  </div>
+
+  <footer class="footer container">
+  <div class="sponsorship">
+    <div class="container">
+      <h2>
+        Sponsorzy
+      </h2>
+
+      <div class="logo-grid">
+        <div>
+          <a href="https://www.dotcom-monitor.com/es/">
+            <img src="/assets/sponsors/dotcom-monitor-logo.png" alt="Dotcom-Monitor" />
+          </a>
+
+          <a href="https://www.loadview-testing.com/products/jmeter-load-testing/">
+            <img src="/assets/sponsors/LoadView-logo.png" alt="LoadView" />
+          </a>
+
+          <a href="http://www.stevetures.com/">
+            <img src="/assets/sponsors/stephen-tures.jpg" alt="Stephen Tures" />
+          </a>
+
+          <a href="https://swayable.com">
+            <img src="/assets/sponsors/swayable.jpeg" alt="Swayable" />
+          </a>
+
+          <a href="https://www.sponsormotion.com/">
+            <img src="/assets/sponsors/SponsorMotion.png" alt="SponsorMotion" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="legal legal--right">
+    <a href='https://joinmastodon.org'>Dołącz do Mastodona</a> · <a href='https://blog.joinmastodon.org'>Blog</a> · <a href='https://mastodon.social/@Mastodon' target='_blank'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mastodon" viewBox="0 0 16 16"><path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a4 4 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522q0-1.288.66-2.046c.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764q.662.757.661 2.046z"/></svg></a>
+  </p>
+
+  <p class="legal"><a href='https://github.com/mastodon/documentation/tree/main/content/pl/user%5cpreferences.md'>Zobacz źródła</a> · <a href='https://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0</a> · <a href='https://joinmastodon.org/imprint'>Imprint</a></p>
+</footer>
+
+</body>
+
+</html>

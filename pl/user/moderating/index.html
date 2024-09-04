@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  
+
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+
+
+<link rel='stylesheet' href='/style.min.6f047efea46ea2384fb98ee2d90642926037234cfeb77e270bbd5421bb705db6.css'>
+
+
+<script src='/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
+
+
+  <title>Radzenie sobie z niechcianą treścią - Mastodon documentation</title>
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://docs.joinmastodon.org/pl/user/moderating/">
+
+  
+    <meta name="description" content="Kontroluj co zobaczysz, dla bardziej przyjaznego doświadczenia.">
+    <meta property="og:description" content="Kontroluj co zobaczysz, dla bardziej przyjaznego doświadczenia.">
+    <meta name="twitter:description" content="Kontroluj co zobaczysz, dla bardziej przyjaznego doświadczenia.">
+  
+
+  <meta name="twitter:title" content="Radzenie sobie z niechcianą treścią">
+  <meta name="twitter:site" content="@joinmastodon">
+
+  <link rel="canonical" href="https://docs.joinmastodon.org/pl/user/moderating/">
+</head>
+
+<body>
+  <div class="container sidebar-layout">
+    <nav class="sidebar"><a class="brand" href="/">
+  <img class="link-logo" src="/brand.svg" alt="Mastodon" />
+</a>
+
+<input id="mobile-nav-toggle" class="mobile-nav-toggle" type="checkbox">
+<label for="mobile-nav-toggle">
+    <span class="menu-open">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z"/></svg>
+    </span>
+    <span class="menu-close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/></svg>
+    </span>
+</label>
+
+<ul>
+  
+  
+    <li>
+      
+        <a href="/pl/" class="">Czym jest Mastodon?</a>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Korzystaj z Mastodona</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/pl/user/signup/" class="">Zarejestruj konto</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/profile/" class="">Dostosuj swój profil</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/posting/" class="">Utwórz wpisy</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/network/" class="">Korzystaj z funkcjonalności sieci</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/moderating/" class="active">Radzenie sobie z niechcianą treścią</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/discoverability/" class="">Promuj siebie i innych</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/preferences/" class="">Zmień swoje ustawienia</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/contacts/" class="">Więcej ustawień</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/external/" class="">Korzystaj z Mastodona zewnętrznie</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/moving/" class="">Przenieś lub opuść konto</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/pl/user/run-your-own/" class="">Prowadź swój własny serwer</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Uruchamianie Mastodona</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Twórz aplikacje dla Mastodona</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Współtwórz Mastodona</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Zgodność ze specyfikacją</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">REST API</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Metody API</span>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Jednostki API</span>
+      
+
+      
+    </li>
+  
+</ul>
+</nav>
+    <main>
+  <h1>Radzenie sobie z niechcianą treścią</h1>
+
+  
+    <p>Kontroluj co zobaczysz, dla bardziej przyjaznego doświadczenia.</p>
+  
+  <aside>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#filters">Filtrowanie wpisów</a>
+          <ul>
+            <li><a href="#filter-phrase">Słowa kluczowe lub frazy</a></li>
+            <li><a href="#filter-expire">Wygasanie po czasie</a></li>
+            <li><a href="#filter-context">Kontekst filtrów</a></li>
+            <li><a href="#filter-drop">Usuwanie zamiast ukrywania</a></li>
+            <li><a href="#filter-whole">Pełne słowa</a></li>
+          </ul>
+        </li>
+        <li><a href="#blocking-and-muting">Działania po stronie użytkownika</a>
+          <ul>
+            <li><a href="#hide-boosts">Ukrywanie udostępnień</a></li>
+            <li><a href="#mute">Wyciszanie</a></li>
+            <li><a href="#block">Blokowanie</a></li>
+            <li><a href="#block-domain">Ukrywanie całego serwera</a></li>
+          </ul>
+        </li>
+        <li><a href="#report">Zgłaszanie nieodpowiedniej treści moderatorom</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+  <div class="e-content">
+    <h2 class="heading" id="filters">
+	<span class="heading__text">Filtrowanie wpisów</span>
+	<a class="heading__anchor-link" href="#filters">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><p>Możliwe jest filtrowanie wpisów według określonych słów kluczowych lub fraz, aby były automatycznie ukrywane.</p>
+<figure><img src="/assets/filter-list.jpg"
+         alt="Przykład aktywnych filtrów dla różnych słów kluczowych w różnych kontekstach."/><figcaption>
+            <p>Przykład aktywnych filtrów dla różnych słów kluczowych w różnych kontekstach.</p>
+        </figcaption>
+</figure>
+
+<p>Aby utworzyć i zarządzać filtrami, odwiedź Preferencje &gt; Filtry. Przycisk „Dodaj nowy filtr” pozwoli na utworzenie nowego filtru, a istniejące filtry mogą zostać edytowane lub usunięte. Istniejące filtry są podsumowane w tabeli.</p>
+<figure><img src="/assets/filter-edit.jpg"
+         alt="Filtry mogą mieć datę wyczerpania, określone konteksty, usuwanie po stronie serwera lub używać granic słów."/><figcaption>
+            <p>Filtry mogą mieć datę wyczerpania, określone konteksty, usuwanie po stronie serwera lub używać granic słów.</p>
+        </figcaption>
+</figure>
+
+<p>Filtry mają następujące opcje:</p>
+<h3 class="heading" id="filter-phrase">
+	<span class="heading__text">Słowa kluczowe lub frazy</span>
+	<a class="heading__anchor-link" href="#filter-phrase">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>To ciąg znaków, który jest sprawdzany. Słowo kluczowe będzie wyszukiwane w zawartości wpisu, uwzględniając CW, opisy mediów i opcje ankiet.</p>
+<h3 class="heading" id="filter-expire">
+	<span class="heading__text">Wygasanie po czasie</span>
+	<a class="heading__anchor-link" href="#filter-expire">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Opcjonalnie możesz zastosować filtr tylko na określony okres. Wygasłe filtry nie są automatycznie usuwane, ale mogą być włączone ponownie, ustawiając nową datę wygaśnięcia (lub wyłączając wygasanie).</p>
+<h3 class="heading" id="filter-context">
+	<span class="heading__text">Kontekst filtrów</span>
+	<a class="heading__anchor-link" href="#filter-context">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Wybierz, gdzie zostanie zastosowany filtr:</p>
+<ul>
+<li>Strona główna i listy – spełniające kryteria wpisy zostaną usunięte ze strony głównej i list</li>
+<li>Powiadomienia – spełniające kryteria powiadomienia nie będą wyświetlane</li>
+<li>Publiczne osie czasu – spełniające kryteria wpisy nie będą pojawiać się na lokalnych/sfederowanych osiach czasu</li>
+<li>Konwersacje – spełniające kryteria wpisy będą ukrywane w wątkach i szczegółowym widoku</li>
+</ul>
+<h3 class="heading" id="filter-drop">
+	<span class="heading__text">Usuwanie zamiast ukrywania</span>
+	<a class="heading__anchor-link" href="#filter-drop">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Filtrowanie zwykle odbywa się po stronie klienta, więc wyłączenie filtru sprawi, że filtrowane wpisu będą widoczne ponownie. Jeśli jednak włączysz „Usuwaj zamiast ukrywać”, pasujące wpisy będą całkowicie usuwane i nigdy nie zobaczysz ich w powiadomieniach lub na stronie głównej.</p>
+<h3 class="heading" id="filter-whole">
+	<span class="heading__text">Pełne słowa</span>
+	<a class="heading__anchor-link" href="#filter-whole">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Filtry zwykle są stosowane we wpisach zawierających wskazane znaki, niezależnie czy są one w środku słowa. Włączenie opcji „Całe słowo” sprawi, że filtr będzie działał tylko, jeżeli słowo jest otoczone przez spacje lub inne znaki niealfanumeryczne.</p>
+<h2 class="heading" id="blocking-and-muting">
+	<span class="heading__text">Działania po stronie użytkownika</span>
+	<a class="heading__anchor-link" href="#blocking-and-muting">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><figure><img src="/assets/profile-dropdown.jpg"
+         alt="Menu wyboru profilu oferuje różnorodne działania."/><figcaption>
+            <p>Menu wyboru profilu oferuje różnorodne działania.</p>
+        </figcaption>
+</figure>
+
+<h3 class="heading" id="hide-boosts">
+	<span class="heading__text">Ukrywanie udostępnień</span>
+	<a class="heading__anchor-link" href="#hide-boosts">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>Jeżeli ukryjesz czyjeś udostępnienia, nie zobaczysz ich udostępnień na stronie głównej. Dotyczy to tylko kont użytkowników, które obecnie obserwujesz.</p>
+<h3 class="heading" id="mute">
+	<span class="heading__text">Wyciszanie</span>
+	<a class="heading__anchor-link" href="#mute">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><figure><img src="/assets/muted.jpg"
+         alt="Przykład wyciszonych kont."/><figcaption>
+            <p>Przykład wyciszonych kont.</p>
+        </figcaption>
+</figure>
+
+<p>Przy wyciszeniu możesz zadecydować czy wyciszysz powiadomienia od tej osoby. Wyciszenie bez wyciszania powiadomień sprawi, że:</p>
+<ul>
+<li>Nie zobaczysz tego użytkownika na stronie głównej</li>
+<li>Nie zobaczysz innych osób, gdy udostępniają tego użytkownika</li>
+<li>Nie zobaczysz innych osób, gdy wspomniają o tym użytkowniku</li>
+<li>Nie zobaczysz tego użytkownika w publicznych osiach czasu</li>
+</ul>
+<p>Jeżeli wybierzesz, aby wyciszyć też powiadomienia od tego użytkownika, nie będziesz dostawać też od niego powiadomień.</p>
+<p>Wyciszenia mogą mieć dodatkowo czas, po którym wygasną.</p>
+<p>Użytkownik nie może się dowiedzieć, że został wyciszony.</p>
+<h3 class="heading" id="block">
+	<span class="heading__text">Blokowanie</span>
+	<a class="heading__anchor-link" href="#block">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><figure><img src="/assets/blocked.jpg"
+         alt="Przykład zablokowanych kont."/><figcaption>
+            <p>Przykład zablokowanych kont.</p>
+        </figcaption>
+</figure>
+
+<p>Blokowanie ukrywa użytkownika z Twojego widoku:</p>
+<ul>
+<li>Nie zobaczysz tego użytkownika na stronie głównej</li>
+<li>Nie zobaczysz innych osób, gdy udostępniają tego użytkownika</li>
+<li>Nie zobaczysz innych osób, gdy wspomniają o tym użytkowniku</li>
+<li>Nie zobaczysz tego użytkownika w publicznych osiach czasu</li>
+<li>Nie zobaczysz powiadomień od tego użytkownika</li>
+</ul>
+<p>Dodatkowo, ze strony zablokowanego użytkownika:</p>
+<ul>
+<li>Użytkownik przestaje Cię obserwować</li>
+<li>Użytkownik nie może Cię zaobserwować ponownie</li>
+<li>Użytkownik nie zobaczy udostępnień Twoich wpisów przez innych</li>
+<li>Użytkownik nie zobaczy Cię w publicznych osiach czasu</li>
+</ul>
+<p>Jeżeli jesteś na tym samym serwerze, na którym jest zablokowana osoba, ta osoba nie będzie mogła zobaczyć Twoich wpisów na Twoim profilu, gdy jest zalogowana.</p>
+<h3 class="heading" id="block-domain">
+	<span class="heading__text">Ukrywanie całego serwera</span>
+	<a class="heading__anchor-link" href="#block-domain">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h3><p>![]({{ relUrl &ldquo;/assets/block-domain.png&rdquo; }})</p>
+<p>Jeżeli zablokujesz cały serwer:</p>
+<ul>
+<li>Nie zobaczysz wpisów z tego serwera na publicznych osiach czasu</li>
+<li>Nie zobaczysz udostępnień z tego serwera na stronie głównej</li>
+<li>Nie zobaczysz powiadomień z tego serwera</li>
+<li>Utracisz obserwujących z tego serwera</li>
+</ul>
+<h2 class="heading" id="report">
+	<span class="heading__text">Zgłaszanie nieodpowiedniej treści moderatorom</span>
+	<a class="heading__anchor-link" href="#report">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24a2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24a2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24a.973.973 0 0 1 0-1.42"/></svg>
+	</a>
+</h2><figure><img src="/assets/report-modal.jpg"
+         alt="Okno zgłaszania pozwalające na wybór przykładowych wpisów, dodanie notatki czy przekierowanie zgłoszeń."/><figcaption>
+            <p>Okno zgłaszania pozwalające na wybór przykładowych wpisów, dodanie notatki czy przekierowanie zgłoszeń.</p>
+        </figcaption>
+</figure>
+
+<p>Jeżeli zobaczysz wpis lub użytkownika naruszającego zasady Twojego serwera, możesz zgłosić użytkownika moderatorom swojego serwera. Wybranie opcji „Zgłoś” otworzy okno zgłaszania. Tam możesz (jest to wskazane) dodać notatkę, w której napiszesz, dlaczego zgłaszasz to konto. Możesz załączyć nieodpowiednie wpisy dla dodatkowego kontekstu zgłoszenia, a jeżeli naruszają one zasady zdalnego serwera, możesz przekierować zgłoszenie również do jego moderatorów.</p>
+
+
+    <p style="color: #606085;">
+      Ostatnio aktualizowano December 21, 2022 · <a href='https://github.com/mastodon/documentation/tree/main/content/pl/user%5cmoderating.md' style="color: #606085;">Popraw tę stronę</a>
+
+      
+        <br />
+
+        Dostępne również w języku:
+
+        
+          <a href="/user/moderating/" style="color: #606085;" hreflang="en">English</a>
+        
+          <a href="/zh-cn/user/moderating/" style="color: #606085;" hreflang="zh-cn">简体中文</a>
+        
+          <a href="/ja/user/moderating/" style="color: #606085;" hreflang="ja">日本語</a>
+        
+      
+    </p>
+
+  </div>
+</main>
+  </div>
+
+  <footer class="footer container">
+  <div class="sponsorship">
+    <div class="container">
+      <h2>
+        Sponsorzy
+      </h2>
+
+      <div class="logo-grid">
+        <div>
+          <a href="https://www.dotcom-monitor.com/es/">
+            <img src="/assets/sponsors/dotcom-monitor-logo.png" alt="Dotcom-Monitor" />
+          </a>
+
+          <a href="https://www.loadview-testing.com/products/jmeter-load-testing/">
+            <img src="/assets/sponsors/LoadView-logo.png" alt="LoadView" />
+          </a>
+
+          <a href="http://www.stevetures.com/">
+            <img src="/assets/sponsors/stephen-tures.jpg" alt="Stephen Tures" />
+          </a>
+
+          <a href="https://swayable.com">
+            <img src="/assets/sponsors/swayable.jpeg" alt="Swayable" />
+          </a>
+
+          <a href="https://www.sponsormotion.com/">
+            <img src="/assets/sponsors/SponsorMotion.png" alt="SponsorMotion" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="legal legal--right">
+    <a href='https://joinmastodon.org'>Dołącz do Mastodona</a> · <a href='https://blog.joinmastodon.org'>Blog</a> · <a href='https://mastodon.social/@Mastodon' target='_blank'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mastodon" viewBox="0 0 16 16"><path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a4 4 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522q0-1.288.66-2.046c.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764q.662.757.661 2.046z"/></svg></a>
+  </p>
+
+  <p class="legal"><a href='https://github.com/mastodon/documentation/tree/main/content/pl/user%5cmoderating.md'>Zobacz źródła</a> · <a href='https://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0</a> · <a href='https://joinmastodon.org/imprint'>Imprint</a></p>
+</footer>
+
+</body>
+
+</html>
